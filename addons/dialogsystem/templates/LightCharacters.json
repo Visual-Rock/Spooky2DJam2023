@@ -7,7 +7,7 @@
 			"values": [
 				"Baldur",
 				"Ziya",
-				"Uri"
+				"Dargan"
 			]
 		},
 		{
@@ -23,5 +23,5 @@
 			"default": ""
 		}
 	],
-	"template_name": "Base Template"
+	"template_name": "Light Characters"
 }

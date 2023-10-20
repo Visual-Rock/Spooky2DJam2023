@@ -1,44 +1,29 @@
 extends CharacterBody2D
 
-# Geschwindigkeit des Spilers in Pixel /Sekunde
-@export var speed: float = 150.0
-@export var min_abstand: float = 30.0
+@onready var AnimationPlayerNode : AnimationPlayer = get_node("AnimationPlayer")
+@onready var Sprit : Sprite2D = get_node("Sprite2D")
+@onready var TorchPosition : Marker2D = get_node("Marker2D")
 
-var is_colliding: bool = false # wenn Kolidiert
-var mouse_position: Vector2
+var max_speed    : int = 50
+var FRICTION     : int = 700
+var ACCELERATION : int = 700
 
-@onready var cam: Camera2D = $Camera2D
+func _physics_process(delta):
+	var direction = Input.get_vector("left", "right", "up", "down").normalized()
+	if direction != Vector2.ZERO:
+		Sprit.flip_h = direction.x < 0
+		print(-6 if direction.x < 0 else 6)
+		TorchPosition.position.x = -6 if direction.x < 0 else 6
+		print(TorchPosition.position.x)
+		AnimationPlayerNode.play("walk")
+		AnimationPlayerNode.speed_scale = 2.0
+		velocity = velocity.move_toward(direction * max_speed, ACCELERATION * delta)
+		queue_redraw()
+	else:
+		AnimationPlayerNode.play("idle")
+		AnimationPlayerNode.speed_scale = 1.0
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+	move_and_slide()
 
-func _process(_delta):
-	# Richtung für bewegung
-	var direction: Vector2 = Vector2.ZERO
-
-	# Spieler in die richtung der Maus drehen
-	mouse_position = get_global_mouse_position()
-	look_at(mouse_position)
-
-	if global_position.distance_to(mouse_position) > min_abstand:
-		if Input.is_action_pressed("move_foreward"):
-			#direction.y -= 1
-			direction.x += 1
-
-	if Input.is_action_pressed("move_back"):
-		#direction.y += 1
-		direction.x -= 1
-
-	if Input.is_action_pressed("move_left"):
-		direction.y -= 1
-		pass
-	if Input.is_action_pressed("move_right"):
-		direction.y += 1
-		pass
-
-	# drehen
-	direction = global_transform.basis_xform(direction)
-
-	# Bewegung dem CharacterBody2D zuweisen
-	velocity = direction.normalized() * speed
-
-func _physics_process(_delta):
-	# Spieler bewegen
-	is_colliding = move_and_slide()
+func _draw():
+	draw_circle(TorchPosition.position, 10.0, Color.AQUA)
