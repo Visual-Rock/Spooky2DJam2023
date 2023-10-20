@@ -12,9 +12,7 @@ func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
 	if direction != Vector2.ZERO:
 		Sprit.flip_h = direction.x < 0
-		print(-6 if direction.x < 0 else 6)
 		TorchPosition.position.x = -6 if direction.x < 0 else 6
-		print(TorchPosition.position.x)
 		AnimationPlayerNode.play("walk")
 		AnimationPlayerNode.speed_scale = 2.0
 		velocity = velocity.move_toward(direction * max_speed, ACCELERATION * delta)
