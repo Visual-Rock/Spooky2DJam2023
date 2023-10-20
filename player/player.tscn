@@ -76,3 +76,5 @@ libraries = {
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(6, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
