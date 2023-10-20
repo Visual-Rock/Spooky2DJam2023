@@ -1,13 +1,7 @@
 extends Node2D
 
-var dialog_manager : DialogManager
-var dialog : Dialog = null
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	dialog_manager = DialogManager.new()
-	dialog_manager.load_dialogs("res://dialogs/Bakes/")
-	dialog = dialog_manager.get_dialog("shop_dargan")
 	pass # Replace with function body.
 
 

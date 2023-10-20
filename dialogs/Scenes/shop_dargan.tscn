@@ -10,8 +10,8 @@
 
 [node name="shop_dargan" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(172.23, -386.162)
-zoom = 1.18792
+scroll_offset = Vector2(-54.0394, -299.279)
+zoom = 0.820836
 script = ExtResource("1_hua4d")
 connections = Array[Dictionary]([{
 "from_node": &"StartDialogNode",
@@ -27,11 +27,11 @@ connections = Array[Dictionary]([{
 
 [node name="TextNode" type="GraphNode" parent="." instance=ExtResource("2_2we1p")]
 layout_mode = 0
-offset_left = 302.938
-offset_top = 101.062
-offset_right = 466.938
-offset_bottom = 324.062
-scale = Vector2(1.18792, 1.18792)
+offset_left = 382.374
+offset_top = 102.279
+offset_right = 546.374
+offset_bottom = 325.279
+scale = Vector2(0.820836, 0.820836)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
@@ -74,11 +74,11 @@ dialog_values = Array[Dictionary]([{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_5txhr")]
 layout_mode = 0
-offset_left = -5.92104
-offset_top = 101.062
-offset_right = 158.079
-offset_bottom = 324.062
-scale = Vector2(1.18792, 1.18792)
+offset_left = 168.956
+offset_top = 102.279
+offset_right = 332.956
+offset_bottom = 325.279
+scale = Vector2(0.820836, 0.820836)
 mouse_filter = 1
 position_offset = Vector2(140, -240)
 resizable = true
@@ -119,11 +119,11 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_c52ar")]
 layout_mode = 0
-offset_left = 611.797
-offset_top = 101.062
-offset_right = 775.797
-offset_bottom = 324.062
-scale = Vector2(1.18792, 1.18792)
+offset_left = 595.791
+offset_top = 102.279
+offset_right = 759.791
+offset_bottom = 325.279
+scale = Vector2(0.820836, 0.820836)
 mouse_filter = 1
 position_offset = Vector2(660, -240)
 resizable = true

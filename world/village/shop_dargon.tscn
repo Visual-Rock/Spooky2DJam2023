@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://oqnolv66wwk4"]
+
+[ext_resource type="Script" path="res://world/village/shop_dargon.gd" id="1_5oyew"]
+[ext_resource type="Texture2D" uid="uid://dq70nyojrp1jt" path="res://icon.svg" id="1_bvu1e"]
+[ext_resource type="Texture2D" uid="uid://ctgf8u2m0aco7" path="res://houses/house_shop.png" id="2_tc0q3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inol2"]
+size = Vector2(52, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7krf5"]
+size = Vector2(26, 28)
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_5oyew")
+
+[node name="House" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_tc0q3")
+
+[node name="HouseCollisionArea" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseCollisionArea"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_inol2")
+debug_color = Color(0.886275, 0.294118, 0.384314, 0.419608)
+
+[node name="Dargon" type="Sprite2D" parent="."]
+position = Vector2(-10, 37)
+scale = Vector2(0.204687, 0.2215)
+texture = ExtResource("1_bvu1e")
+
+[node name="DargonCollisionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DargonCollisionArea"]
+position = Vector2(-10, 37)
+shape = SubResource("RectangleShape2D_7krf5")
+
+[connection signal="area_entered" from="DargonCollisionArea" to="." method="_on_area_2d_area_entered"]
