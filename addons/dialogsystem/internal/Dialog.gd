@@ -71,9 +71,12 @@ func bake( ) -> void:
 		var id : int = 0
 		
 		var nodes_map = {}
+		var start : int = 0
 		
 		for node in scene.get_children():
 			if node is GraphNode:
+				if node.node_id == 0:
+					start = id
 				nodes.append(node.get_bake_data(id))
 				nodes_map[node.name] = id
 				id += 1
@@ -89,7 +92,8 @@ func bake( ) -> void:
 				node["next"] = to
 		
 		out["nodes"] = nodes
-		out["start"] = 0
+		print(start)
+		out["start"] = start
 		var file = FileAccess.open(get_bake_path(), FileAccess.WRITE)
 		file.store_string( JSON.stringify(out) )
 	

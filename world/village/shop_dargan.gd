@@ -11,5 +11,4 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	print("Hello World")
-	pass # Replace with function body.
+	Global.DialogOverlay.show_dialog("shop_dargan", {})

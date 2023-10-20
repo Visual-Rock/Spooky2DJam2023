@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b451rg8c8cvjd"]
+
+[ext_resource type="PackedScene" uid="uid://cvueoh1eyvbmi" path="res://world/village/village.tscn" id="1_5gm60"]
+[ext_resource type="Script" path="res://world/world.gd" id="1_a2alj"]
+
+[node name="World" type="Node2D"]
+scale = Vector2(6, 6)
+script = ExtResource("1_a2alj")
+
+[node name="Village" parent="." instance=ExtResource("1_5gm60")]

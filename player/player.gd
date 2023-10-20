@@ -4,9 +4,9 @@ extends CharacterBody2D
 @onready var Sprit : Sprite2D = get_node("Sprite2D")
 @onready var TorchPosition : Marker2D = get_node("Marker2D")
 
-var max_speed    : int = 50
-var FRICTION     : int = 700
-var ACCELERATION : int = 700
+var max_speed    : int = 500
+var FRICTION     : int = 4200
+var ACCELERATION : int = 4200
 
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()

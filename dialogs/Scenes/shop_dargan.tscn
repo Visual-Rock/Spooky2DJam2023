@@ -10,10 +10,10 @@
 
 [node name="shop_dargan" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(-54.0394, -299.279)
-zoom = 0.820836
+scroll_offset = Vector2(0, -10)
+zoom = 0.678377
 script = ExtResource("1_hua4d")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"StartDialogNode",
 "from_port": 0,
 "to_node": &"TextNode",
@@ -23,15 +23,15 @@ connections = Array[Dictionary]([{
 "from_port": 0,
 "to_node": &"EndDialogNode",
 "to_port": 0
-}])
+}]
 
 [node name="TextNode" type="GraphNode" parent="." instance=ExtResource("2_2we1p")]
 layout_mode = 0
-offset_left = 382.374
-offset_top = 102.279
-offset_right = 546.374
-offset_bottom = 325.279
-scale = Vector2(0.820836, 0.820836)
+offset_left = 271.351
+offset_top = -152.81
+offset_right = 435.351
+offset_bottom = 70.1895
+scale = Vector2(0.678377, 0.678377)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
@@ -74,11 +74,11 @@ dialog_values = Array[Dictionary]([{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_5txhr")]
 layout_mode = 0
-offset_left = 168.956
-offset_top = 102.279
-offset_right = 332.956
-offset_bottom = 325.279
-scale = Vector2(0.820836, 0.820836)
+offset_left = 94.9728
+offset_top = -152.81
+offset_right = 258.973
+offset_bottom = 70.1895
+scale = Vector2(0.678377, 0.678377)
 mouse_filter = 1
 position_offset = Vector2(140, -240)
 resizable = true
@@ -114,16 +114,16 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Text"
+"value": "Start"
 }])
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_c52ar")]
 layout_mode = 0
-offset_left = 595.791
-offset_top = 102.279
-offset_right = 759.791
-offset_bottom = 325.279
-scale = Vector2(0.820836, 0.820836)
+offset_left = 447.729
+offset_top = -152.81
+offset_right = 611.729
+offset_bottom = 70.1895
+scale = Vector2(0.678377, 0.678377)
 mouse_filter = 1
 position_offset = Vector2(660, -240)
 resizable = true
@@ -151,9 +151,9 @@ node_id = 3
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
 "name": "Name",
-"selected": 0,
+"selected": 2,
 "type": 0,
-"value": "Baldur",
+"value": "Dargan",
 "values": ["Baldur", "Ziya", "Dargan"]
 }, {
 "default": "",

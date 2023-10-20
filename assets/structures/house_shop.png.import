@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bngp3i7wjhghn"
-path="res://.godot/imported/Goblin_spritesheet.png-aeb0967b185d02b6feaa9e2cd86c4f91.ctex"
+uid="uid://bv11e7j17nvx4"
+path="res://.godot/imported/house_shop.png-991d5135854e7672fafa6c634ddd3e50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/dialogsystem/templates/Goblin_spritesheet.png"
-dest_files=["res://.godot/imported/Goblin_spritesheet.png-aeb0967b185d02b6feaa9e2cd86c4f91.ctex"]
+source_file="res://assets/structures/house_shop.png"
+dest_files=["res://.godot/imported/house_shop.png-991d5135854e7672fafa6c634ddd3e50.ctex"]
 
 [params]
 
