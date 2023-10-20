@@ -18,7 +18,7 @@
 	],
 	"branch_values": [
 		{
-			"name": "Option Name",
+			"name": "Text",
 			"type": 1,
 			"default": ""
 		}
