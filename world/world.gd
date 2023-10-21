@@ -5,18 +5,21 @@ extends Node2D
 func _ready():
 	Global.init()
 	
-	Console.add_command("candela", _on_candela_command, 1)
+	Console.add_command("set", _on_set_command, 2)
 	Console.add_command("get", _on_get_command, 1)
 
-func _on_candela_command(param: String) -> void:
-	var val = int(param)
-	if val > PlayerAutoload.max_candela:
-		PlayerAutoload.candela = PlayerAutoload.max_candela
-	elif val < 0:
-		PlayerAutoload.candela = 0
-	else:
-		PlayerAutoload.candela = val
+func _on_set_command(param: String, param2: String) -> void:
+	if param == "candela":
+		PlayerAutoload.candela = int(param2)
+	elif param == "speed":
+		PlayerAutoload.player_max_speed = int(param2)
+	elif param == "lux":
+		PlayerAutoload.lux = int(param2)
 
 func _on_get_command(param: String) -> void:
 	if param == "candela":
 		Console.print_line(str(PlayerAutoload.candela))
+	elif param == "speed":
+		Console.print_line(str(PlayerAutoload.player_max_speed))
+	elif param == "lux":
+		Console.print_line(str(PlayerAutoload.lux))

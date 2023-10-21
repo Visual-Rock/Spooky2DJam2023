@@ -35,7 +35,7 @@ func _input(event):
 				Main.visible = false
 				emit_signal("dialog_ended")
 				if PlayerAutoload.player:
-					PlayerAutoload.player.max_speed = 500
+					PlayerAutoload.player.max_speed = PlayerAutoload.player_max_speed
 				return
 			dialog.advance()
 			update()
@@ -45,7 +45,7 @@ func update() -> void:
 		Main.visible = false
 		emit_signal("dialog_ended")
 		if PlayerAutoload.player:
-			PlayerAutoload.player.max_speed = 500
+			PlayerAutoload.player.max_speed = PlayerAutoload.player_max_speed
 		return
 	
 	for branch in Branches.get_children():

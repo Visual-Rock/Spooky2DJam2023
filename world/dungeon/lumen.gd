@@ -5,4 +5,7 @@ func _ready():
 
 func _on_area_2d_body_entered(body):
 	PlayerAutoload.candela += 3
+	$"AnimationPlayer".play("collect")
+
+func delte() -> void:
 	queue_free()

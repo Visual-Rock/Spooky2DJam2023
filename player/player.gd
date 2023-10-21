@@ -7,12 +7,13 @@ extends CharacterBody2D
 var respawn_pos : Vector2
 var dead : bool = false
 
-var max_speed    : int = 500
+var max_speed    : int = PlayerAutoload.player_max_speed
 var FRICTION     : int = 4200
 var ACCELERATION : int = 4200
 
 func _ready():
 	PlayerAutoload.player = self
+	PlayerAutoload.connect("player_max_speed_changed", func(x): max_speed = x)
 	respawn_pos = global_position
 
 func _physics_process(delta):
