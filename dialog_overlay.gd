@@ -68,7 +68,7 @@ func _on_dialog_branch_pressed() -> void:
 		if branch.button_pressed:
 			break
 		i += 1
-	print(dialog.get_branch(i))
+	
 	emit_signal("branch_selected", dialog.get_branch(i))
 	dialog.advance(i)
 	update()
