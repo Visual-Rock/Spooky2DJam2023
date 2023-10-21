@@ -1,0 +1,29 @@
+{
+	"node_values": [
+		{
+			"name": "Name",
+			"type": 0,
+			"default": 0,
+			"values": [
+				"Baldur",
+				"Lumen",
+				"Ziya",
+				"Dargan",
+				"Blackburn"
+			]
+		},
+		{
+			"name": "Text",
+			"type": 2,
+			"default": ""
+		}
+	],
+	"branch_values": [
+		{
+			"name": "Text",
+			"type": 1,
+			"default": ""
+		}
+	],
+	"template_name": "Game Start"
+}

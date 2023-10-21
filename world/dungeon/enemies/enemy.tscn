@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://wxmr7cbpqpil"]
+[gd_scene load_steps=4 format=3 uid="uid://wxmr7cbpqpil"]
 
 [ext_resource type="Script" path="res://world/dungeon/enemies/enemy.gd" id="1_ytasx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_16xqo"]
-radius = 47.2969
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4a6yp"]
+radius = 6.0
 
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_ytasx")
@@ -19,4 +21,14 @@ autoplay = true
 max_distance = 600.0
 attenuation = 0.615572
 
+[node name="TrackTimer" type="Timer" parent="."]
+
+[node name="KillArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillArea"]
+shape = SubResource("CircleShape2D_4a6yp")
+
 [connection signal="body_entered" from="LookArea" to="." method="_on_look_area_body_entered"]
+[connection signal="body_exited" from="LookArea" to="." method="_on_look_area_body_exited"]
+[connection signal="timeout" from="TrackTimer" to="." method="_on_track_timer_timeout"]
+[connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]

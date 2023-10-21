@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1q83mo0opde8"]
+
+[ext_resource type="Script" path="res://world/dungeon/lumen.gd" id="1_x65s2"]
+[ext_resource type="Texture2D" uid="uid://ch8xwhkd8x1n6" path="res://assets/entities/Lumen.png" id="2_3sbj6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qs8kr"]
+radius = 14.1421
+
+[node name="Lumen" type="Node2D"]
+script = ExtResource("1_x65s2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_3sbj6")
+vframes = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qs8kr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

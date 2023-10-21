@@ -6,6 +6,7 @@ func _ready():
 	Global.init()
 	
 	Console.add_command("candela", _on_candela_command, 1)
+	Console.add_command("get", _on_get_command, 1)
 
 func _on_candela_command(param: String) -> void:
 	var val = int(param)
@@ -15,6 +16,10 @@ func _on_candela_command(param: String) -> void:
 		PlayerAutoload.candela = 0
 	else:
 		PlayerAutoload.candela = val
+
+func _on_get_command(param: String) -> void:
+	if param == "candela":
+		Console.print_line(str(PlayerAutoload.candela))
 
 func _physics_process(delta):
 	print(Engine.get_frames_per_second())

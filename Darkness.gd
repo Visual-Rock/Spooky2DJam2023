@@ -25,7 +25,7 @@ func _ready():
 
 func load_light() -> void:
 	var light : Image= load("res://assets/world/Light.png").get_image()
-	light.resize(light.get_width() * PlayerAutoload.get_light_strength(), light.get_width() * PlayerAutoload.get_light_strength())
+	light.resize(light.get_width() * PlayerAutoload.get_light_strength() * 2, light.get_width() * PlayerAutoload.get_light_strength() * 2)
 	light.convert(Image.FORMAT_RGBAH)
 	original_light_texture = original_light_texture.create_from_image(light)
 	original_light_image = light

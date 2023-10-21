@@ -1,5 +1,7 @@
 extends Node
 
+signal finished_init()
+
 var DialogOverlay : CanvasLayer
 
 func init():

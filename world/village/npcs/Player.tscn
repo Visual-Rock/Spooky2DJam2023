@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2debxsv4ddy7"]
+[gd_scene load_steps=6 format=3 uid="uid://biujapwq5bt66"]
 
-[ext_resource type="Texture2D" uid="uid://hs4v3cdji1ic" path="res://assets/entities/Ranger_idle.png" id="1_57iv0"]
+[ext_resource type="Texture2D" uid="uid://bh4lbx681py28" path="res://assets/entities/Peasant_spritesheet.png" id="1_oyohd"]
 
 [sub_resource type="Animation" id="Animation_8u1ng"]
 length = 0.001
@@ -14,11 +14,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [16]
 }
 
 [sub_resource type="Animation" id="Animation_y6y1r"]
 resource_name = "idle"
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -27,10 +28,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.000179887, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 0]
+"values": [16, 16, 17, 18, 19, 20, 21, 22, 23, 24]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ulf8f"]
@@ -40,25 +41,27 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbkt0"]
-radius = 2.0
-height = 6.0
+radius = 4.0
+height = 12.0
 
-[node name="Dargan" type="Node2D"]
+[node name="Player" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_57iv0")
-hframes = 2
+texture = ExtResource("1_oyohd")
+flip_h = true
+hframes = 8
+vframes = 8
+frame = 19
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ulf8f")
 }
 autoplay = "idle"
-speed_scale = 0.25
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1, 6)
+position = Vector2(-1, 10)
 shape = SubResource("CapsuleShape2D_hbkt0")

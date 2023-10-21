@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal dialog_ended()
+
 @onready var Main : Control = get_node("Control")
 
 @onready var NameLabel : Label = get_node("Control/MarginContainer/HBoxContainer/Panel/MarginContainer/VBoxContainer/Name")
@@ -17,7 +19,8 @@ func _ready():
 
 func show_dialog(dialog_name: String, values: Dictionary) -> void:
 	Main.visible = true
-	PlayerAutoload.player.max_speed = 0
+	if PlayerAutoload.player:
+		PlayerAutoload.player.max_speed = 0
 	dialog = dialog_manager.get_dialog(dialog_name)
 	dialog.restart()
 	dialog.injection_data = values
@@ -29,7 +32,9 @@ func _input(event):
 			if dialog.current_node_type() == Dialog.DialogNodeTypes.End:
 				dialog = null
 				Main.visible = false
-				PlayerAutoload.player.max_speed = 500
+				emit_signal("dialog_ended")
+				if PlayerAutoload.player:
+					PlayerAutoload.player.max_speed = 500
 				return
 			dialog.advance()
 			update()
@@ -37,7 +42,9 @@ func _input(event):
 func update() -> void:
 	if dialog == null:
 		Main.visible = false
-		PlayerAutoload.player.max_speed = 500
+		emit_signal("dialog_ended")
+		if PlayerAutoload.player:
+			PlayerAutoload.player.max_speed = 500
 		return
 	
 	for branch in Branches.get_children():

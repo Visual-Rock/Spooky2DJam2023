@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnyxgui52j703"]
+[gd_scene load_steps=11 format=3 uid="uid://ojjyswdqhae"]
 
-[ext_resource type="PackedScene" uid="uid://wxmr7cbpqpil" path="res://world/dungeon/enemies/enemy.tscn" id="1_hra8m"]
-[ext_resource type="AudioStream" uid="uid://ccnng2mi1j15v" path="res://assets/sounds/enemies/slime_idle.ogg" id="2_cvtox"]
-[ext_resource type="Script" path="res://world/dungeon/enemies/slime.gd" id="2_gewrc"]
-[ext_resource type="AudioStream" uid="uid://bihpdwwyeh122" path="res://assets/sounds/enemies/slime_track.ogg" id="3_rujb5"]
-[ext_resource type="Texture2D" uid="uid://bbdfi2ratyit5" path="res://assets/entities/Slime_spritesheet.png" id="3_t7iua"]
+[ext_resource type="PackedScene" uid="uid://wxmr7cbpqpil" path="res://world/dungeon/enemies/enemy.tscn" id="1_mralq"]
+[ext_resource type="Script" path="res://world/dungeon/enemies/slime.gd" id="2_e4pi0"]
+[ext_resource type="AudioStream" uid="uid://c2y0vtkhe2ku6" path="res://assets/sounds/enemies/orc_track.ogg" id="2_ipu7u"]
+[ext_resource type="AudioStream" uid="uid://s8fklsye21sm" path="res://assets/sounds/enemies/orc_idle.ogg" id="3_ubog3"]
+[ext_resource type="Texture2D" uid="uid://bjl43ai8ybdrr" path="res://assets/entities/Ogre_spritesheet.png" id="3_xk3it"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_glj66"]
 radius = 45.0444
@@ -26,7 +26,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_1j0p1"]
 resource_name = "idle"
-length = 0.7
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -35,15 +34,15 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [16, 17, 18, 19, 20, 21, 22]
+"values": [16, 17, 16]
 }
 
 [sub_resource type="Animation" id="Animation_yj4g5"]
 resource_name = "walk"
-length = 0.6
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -52,10 +51,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8dwdi"]
@@ -65,18 +64,22 @@ _data = {
 "walk": SubResource("Animation_yj4g5")
 }
 
-[node name="Slime" instance=ExtResource("1_hra8m")]
-script = ExtResource("2_gewrc")
-speed = 100
-idle = ExtResource("2_cvtox")
-track = ExtResource("3_rujb5")
+[node name="Orc" instance=ExtResource("1_mralq")]
+y_sort_enabled = true
+script = ExtResource("2_e4pi0")
+speed = 300
+idle = ExtResource("3_ubog3")
+track = ExtResource("2_ipu7u")
 
 [node name="CollisionShape2D" parent="LookArea" index="0"]
 shape = SubResource("CircleShape2D_glj66")
 
+[node name="AudioStreamPlayer2D" parent="." index="1"]
+max_distance = 1000.0
+
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]
 texture_filter = 1
-texture = ExtResource("3_t7iua")
+texture = ExtResource("3_xk3it")
 hframes = 8
 vframes = 8
 frame = 16
@@ -85,6 +88,3 @@ frame = 16
 libraries = {
 "": SubResource("AnimationLibrary_8dwdi")
 }
-
-[node name="CollisionShape2D" parent="KillArea" index="0"]
-position = Vector2(0, 9)

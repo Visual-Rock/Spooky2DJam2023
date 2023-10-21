@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bj7ye5r2oawft"]
+[gd_scene load_steps=9 format=3 uid="uid://bj7ye5r2oawft"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_0g26k"]
 [ext_resource type="Texture2D" uid="uid://bh4lbx681py28" path="res://assets/entities/Peasant_spritesheet.png" id="2_x8w1y"]
-[ext_resource type="Texture2D" uid="uid://cdr2a4gurrmx2" path="res://assets/world/Light.png" id="3_t4v5j"]
 
 [sub_resource type="Animation" id="Animation_iqeaj"]
 length = 0.001
@@ -17,6 +16,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [16]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_rn3xx"]
@@ -53,9 +64,55 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_5fki0"]
+resource_name = "death"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35, 36, 37, 38]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"reset"
+}, {
+"args": [],
+"method": &"finished"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mk005"]
 _data = {
 "RESET": SubResource("Animation_iqeaj"),
+"death": SubResource("Animation_5fki0"),
 "idle": SubResource("Animation_rn3xx"),
 "walk": SubResource("Animation_ngaty")
 }
@@ -63,9 +120,6 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kploy"]
 radius = 6.0
 height = 20.0
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dfmg0"]
-blend_mode = 3
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0g26k")
@@ -75,7 +129,7 @@ texture_filter = 1
 texture = ExtResource("2_x8w1y")
 hframes = 8
 vframes = 8
-frame = 16
+frame = 32
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -88,6 +142,7 @@ position = Vector2(6, 0)
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_kploy")
 
@@ -100,7 +155,6 @@ shape = SubResource("CapsuleShape2D_kploy")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,12 +162,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
-material = SubResource("CanvasItemMaterial_dfmg0")
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_t4v5j")
+color = Color(0, 0, 0, 0)
