@@ -16,6 +16,7 @@ func _ready():
 	respawn_pos = global_position
 
 func _physics_process(delta):
+	$"CanvasLayer/Control/FPS".text = "FPS: " + str(Engine.get_frames_per_second())
 	if !dead:
 		var direction = Input.get_vector("left", "right", "up", "down").normalized()
 		if direction != Vector2.ZERO && max_speed != 0:

@@ -20,6 +20,3 @@ func _on_candela_command(param: String) -> void:
 func _on_get_command(param: String) -> void:
 	if param == "candela":
 		Console.print_line(str(PlayerAutoload.candela))
-
-func _physics_process(delta):
-	print(Engine.get_frames_per_second())
