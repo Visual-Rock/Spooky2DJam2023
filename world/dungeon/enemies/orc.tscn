@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bjl43ai8ybdrr" path="res://assets/entities/Ogre_spritesheet.png" id="3_xk3it"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_glj66"]
-radius = 45.0444
+radius = 50.11
 
 [sub_resource type="Animation" id="Animation_av84s"]
 length = 0.001
@@ -70,6 +70,7 @@ script = ExtResource("2_e4pi0")
 speed = 300
 idle = ExtResource("3_ubog3")
 track = ExtResource("2_ipu7u")
+track_radius = 50
 
 [node name="CollisionShape2D" parent="LookArea" index="0"]
 shape = SubResource("CircleShape2D_glj66")

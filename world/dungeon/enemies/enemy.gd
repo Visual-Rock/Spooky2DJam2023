@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 @export var idle : AudioStream
 @export var track : AudioStream
+@export var track_radius : int = 45
 @export var track_duration : float = 1.0 
 
 @export var follow_player : bool = true
@@ -15,6 +16,13 @@ var track_player : bool = false
 func _ready():
 	$"AudioStreamPlayer2D".stream = idle
 	$"AudioStreamPlayer2D".play()
+	
+	PlayerAutoload.connect("player_stealth_factor_changed", change_radius)
+
+func change_radius(factor: float) -> void:
+	var circle := CircleShape2D.new()
+	circle.radius = track_radius * factor
+	$"LookArea/CollisionShape2D".shape = circle
 
 func _physics_process(delta):
 	if follow_player:
