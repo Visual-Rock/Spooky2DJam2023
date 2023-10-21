@@ -131,7 +131,6 @@ scale = Vector2(16.0104, 3.71354)
 texture = ExtResource("6_7fopo")
 
 [node name="Darkness" type="Node2D" parent="."]
-visible = false
 
 [node name="Darkness" parent="Darkness" instance=ExtResource("7_wfi1i")]
 position = Vector2(-153, -559)

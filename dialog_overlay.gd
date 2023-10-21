@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal dialog_ended()
+signal branch_selected(branch: Dictionary)
 
 @onready var Main : Control = get_node("Control")
 
@@ -54,7 +55,7 @@ func update() -> void:
 		var branches = dialog.get_branches()
 		for branch in range(0, dialog.get_branches_count()):
 			var btn = Button.new()
-			btn.text = dialog.get_branch_value(branch, "Option Name")
+			btn.text = dialog.get_branch_value(branch, "Text")
 			btn.connect("pressed", _on_dialog_branch_pressed)
 			Branches.add_child(btn)
 	
@@ -67,5 +68,7 @@ func _on_dialog_branch_pressed() -> void:
 		if branch.button_pressed:
 			break
 		i += 1
+	print(dialog.get_branch(i))
+	emit_signal("branch_selected", dialog.get_branch(i))
 	dialog.advance(i)
 	update()
