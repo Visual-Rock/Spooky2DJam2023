@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerAutoload="*res://player/PlayerAutoload.gd"
 Global="*res://Global.gd"
+Console="*res://addons/console/Console.gd"
 
 [display]
 
@@ -27,7 +28,7 @@ window/size/viewport_height=720
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogsystem/plugin.cfg")
+enabled=PackedStringArray("res://addons/console/plugin.cfg", "res://addons/dialogsystem/plugin.cfg")
 
 [input]
 

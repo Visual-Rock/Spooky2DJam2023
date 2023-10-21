@@ -27,4 +27,5 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _draw():
-	draw_circle(TorchPosition.position, 10.0, Color.AQUA)
+	#draw_circle(TorchPosition.position, 10.0, Color.AQUA)
+	pass
