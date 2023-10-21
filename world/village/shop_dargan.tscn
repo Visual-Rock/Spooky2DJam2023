@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://oqnolv66wwk4"]
 
 [ext_resource type="Script" path="res://world/village/shop_dargan.gd" id="1_j8mg4"]
-[ext_resource type="Texture2D" uid="uid://ctgf8u2m0aco7" path="res://houses/house_shop.png" id="2_0fyur"]
+[ext_resource type="Texture2D" uid="uid://bv11e7j17nvx4" path="res://assets/structures/house_shop.png" id="2_e1fbi"]
 [ext_resource type="Texture2D" uid="uid://dq70nyojrp1jt" path="res://icon.svg" id="3_7mxny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inol2"]
@@ -16,7 +16,7 @@ script = ExtResource("1_j8mg4")
 [node name="House" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -15)
-texture = ExtResource("2_0fyur")
+texture = ExtResource("2_e1fbi")
 
 [node name="HouseCollisionArea" type="StaticBody2D" parent="."]
 position = Vector2(0, -15)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctgf8u2m0aco7"
-path="res://.godot/imported/house_shop.png-ed8d04ab301ef7ca0ef559406f0ae605.ctex"
+uid="uid://luw7d6a8bkvy"
+path="res://.godot/imported/TX Shadow Plant.png-273765a42002bc3b02f0a69f24c94f9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://houses/house_shop.png"
-dest_files=["res://.godot/imported/house_shop.png-ed8d04ab301ef7ca0ef559406f0ae605.ctex"]
+source_file="res://assets/world/TX Shadow Plant.png"
+dest_files=["res://.godot/imported/TX Shadow Plant.png-273765a42002bc3b02f0a69f24c94f9d.ctex"]
 
 [params]
 

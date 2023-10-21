@@ -8,9 +8,12 @@ var max_speed    : int = 500
 var FRICTION     : int = 4200
 var ACCELERATION : int = 4200
 
+func _ready():
+	PlayerAutoload.player = self
+
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down").normalized()
-	if direction != Vector2.ZERO:
+	if direction != Vector2.ZERO && max_speed != 0:
 		Sprit.flip_h = direction.x < 0
 		TorchPosition.position.x = -6 if direction.x < 0 else 6
 		AnimationPlayerNode.play("walk")

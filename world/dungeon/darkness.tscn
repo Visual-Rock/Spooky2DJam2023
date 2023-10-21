@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://sq54nfd76wcu"]
+
+[ext_resource type="Texture2D" uid="uid://ca1xvm5qfakbv" path="res://assets/world/Darkness.png" id="1_1q13f"]
+[ext_resource type="Script" path="res://Darkness.gd" id="1_7jb2w"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fcwaj"]
+blend_mode = 3
+
+[node name="Darkness" type="Sprite2D"]
+material = SubResource("CanvasItemMaterial_fcwaj")
+texture = ExtResource("1_1q13f")
+centered = false
+script = ExtResource("1_7jb2w")
