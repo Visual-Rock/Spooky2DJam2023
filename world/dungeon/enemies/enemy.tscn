@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://wxmr7cbpqpil"]
+[gd_scene load_steps=3 format=3 uid="uid://wxmr7cbpqpil"]
 
 [ext_resource type="Script" path="res://world/dungeon/enemies/enemy.gd" id="1_ytasx"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_16xqo"]
+radius = 47.2969
+
 [node name="Enemy" type="CharacterBody2D"]
 script = ExtResource("1_ytasx")
+
+[node name="LookArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LookArea"]
+shape = SubResource("CircleShape2D_16xqo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = -5.51
+autoplay = true
+max_distance = 600.0
+attenuation = 0.615572
+
+[connection signal="body_entered" from="LookArea" to="." method="_on_look_area_body_entered"]

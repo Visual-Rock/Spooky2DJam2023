@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3skeyfwbjjk8"]
 
 [ext_resource type="Script" path="res://world/village/shop_ziya.gd" id="1_8l0ij"]
-[ext_resource type="Texture2D" uid="uid://dq70nyojrp1jt" path="res://icon.svg" id="1_gf4fx"]
+[ext_resource type="PackedScene" uid="uid://cn42bwgkybwqv" path="res://world/village/npcs/Ziya.tscn" id="2_15kqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xs3f1"]
 size = Vector2(26, 28)
@@ -9,10 +9,8 @@ size = Vector2(26, 28)
 [node name="ShopZiya" type="Node2D"]
 script = ExtResource("1_8l0ij")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-9.53674e-07, 0)
-scale = Vector2(0.204687, 0.2215)
-texture = ExtResource("1_gf4fx")
+[node name="Ziya" parent="." instance=ExtResource("2_15kqs")]
+position = Vector2(0, -7)
 
 [node name="ZiyaCollisionArea" type="Area2D" parent="."]
 

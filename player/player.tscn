@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bj7ye5r2oawft"]
+[gd_scene load_steps=10 format=3 uid="uid://bj7ye5r2oawft"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_0g26k"]
 [ext_resource type="Texture2D" uid="uid://bh4lbx681py28" path="res://assets/entities/Peasant_spritesheet.png" id="2_x8w1y"]
+[ext_resource type="Texture2D" uid="uid://cdr2a4gurrmx2" path="res://assets/world/Light.png" id="3_t4v5j"]
 
 [sub_resource type="Animation" id="Animation_iqeaj"]
 length = 0.001
@@ -63,6 +64,9 @@ _data = {
 radius = 6.0
 height = 20.0
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dfmg0"]
+blend_mode = 3
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0g26k")
 
@@ -92,3 +96,24 @@ shape = SubResource("CapsuleShape2D_kploy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, 6)
 shape = SubResource("CapsuleShape2D_kploy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+material = SubResource("CanvasItemMaterial_dfmg0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_t4v5j")

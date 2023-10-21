@@ -15,3 +15,6 @@ func _on_candela_command(param: String) -> void:
 		PlayerAutoload.candela = 0
 	else:
 		PlayerAutoload.candela = val
+
+func _physics_process(delta):
+	print(Engine.get_frames_per_second())

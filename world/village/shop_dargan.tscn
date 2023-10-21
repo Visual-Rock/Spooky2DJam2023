@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://world/village/shop_dargan.gd" id="1_j8mg4"]
 [ext_resource type="Texture2D" uid="uid://bv11e7j17nvx4" path="res://assets/structures/house_shop.png" id="2_e1fbi"]
-[ext_resource type="Texture2D" uid="uid://dq70nyojrp1jt" path="res://icon.svg" id="3_7mxny"]
+[ext_resource type="PackedScene" uid="uid://b2debxsv4ddy7" path="res://world/village/npcs/Dargan.tscn" id="3_7x5cp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inol2"]
 size = Vector2(52, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7krf5"]
-size = Vector2(26, 28)
+size = Vector2(8, 14)
 
 [node name="Shop" type="Node2D"]
 script = ExtResource("1_j8mg4")
@@ -26,16 +26,14 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_inol2")
 debug_color = Color(0.886275, 0.294118, 0.384314, 0.419608)
 
-[node name="Dargon" type="Sprite2D" parent="."]
-position = Vector2(-10, 22)
-scale = Vector2(0.204687, 0.2215)
-texture = ExtResource("3_7mxny")
+[node name="Dargan" parent="." instance=ExtResource("3_7x5cp")]
+position = Vector2(-13, 7)
 
 [node name="DargonCollisionArea" type="Area2D" parent="."]
 position = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DargonCollisionArea"]
-position = Vector2(-10, 37)
+position = Vector2(-15, 26)
 shape = SubResource("RectangleShape2D_7krf5")
 
 [connection signal="area_entered" from="DargonCollisionArea" to="." method="_on_area_2d_area_entered"]

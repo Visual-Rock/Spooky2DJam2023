@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2debxsv4ddy7"]
+
+[ext_resource type="Texture2D" uid="uid://hs4v3cdji1ic" path="res://assets/entities/Ranger_idle.png" id="1_57iv0"]
+
+[sub_resource type="Animation" id="Animation_8u1ng"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_y6y1r"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.000179887, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [16, 0, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ulf8f"]
+_data = {
+"RESET": SubResource("Animation_8u1ng"),
+"idle": SubResource("Animation_y6y1r")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hbkt0"]
+radius = 2.0
+height = 4.0
+
+[node name="Dargan" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_57iv0")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ulf8f")
+}
+autoplay = "idle"
+speed_scale = 0.25
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 6)
+shape = SubResource("CapsuleShape2D_hbkt0")

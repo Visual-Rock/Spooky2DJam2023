@@ -8,11 +8,11 @@ var original_light_image : Image
 var last_torch_pos = Vector2.ZERO
 
 func _ready():
-	visible = true
+	# visible = true
 	
 	var darkness = load("res://assets/world/Darkness.png")
 	var img : Image = darkness.get_image()
-	img.resize(16 * scale.x, 16 * scale.y)
+	img.resize(32 * scale.x, 32 * scale.y)
 	img.convert(Image.FORMAT_RGBAH)
 	
 	original_darkness_image = img
@@ -34,7 +34,7 @@ func load_light() -> void:
 func _physics_process(delta):
 	if PlayerAutoload.player != null:
 		var torch_pos = PlayerAutoload.player.TorchPosition.global_position
-		var global_texture_rect = Rect2(global_position - Vector2(32, 32) * 6, original_darkness_texture.get_size() * 6 + Vector2(32, 32) * 6)
+		var global_texture_rect = Rect2(global_position - Vector2(64, 64) * 6, (original_darkness_texture.get_size() + Vector2(128, 128)) * 6)
 		if global_texture_rect.has_point(torch_pos) && torch_pos != last_torch_pos:
 			last_torch_pos = torch_pos
 			update_texture()

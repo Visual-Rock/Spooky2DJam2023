@@ -9,6 +9,7 @@ var FRICTION     : int = 4200
 var ACCELERATION : int = 4200
 
 func _ready():
+	$"CanvasLayer/Control".visible = false
 	PlayerAutoload.player = self
 
 func _physics_process(delta):

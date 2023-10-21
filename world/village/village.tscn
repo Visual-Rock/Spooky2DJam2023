@@ -1,15 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cvueoh1eyvbmi"]
+[gd_scene load_steps=3 format=3 uid="uid://cvueoh1eyvbmi"]
 
 [ext_resource type="PackedScene" uid="uid://oqnolv66wwk4" path="res://world/village/shop_dargan.tscn" id="1_4pc3x"]
-[ext_resource type="PackedScene" uid="uid://bj7ye5r2oawft" path="res://player/player.tscn" id="2_tne3r"]
 [ext_resource type="PackedScene" uid="uid://b3skeyfwbjjk8" path="res://world/village/shop_ziya.tscn" id="3_1jcyo"]
-
 
 [node name="Village" type="Node2D"]
 y_sort_enabled = true
-
-[node name="Player" parent="." instance=ExtResource("2_tne3r")]
-position = Vector2(127, 64)
 
 [node name="ShopDargon" parent="." instance=ExtResource("1_4pc3x")]
 position = Vector2(47, 50)
