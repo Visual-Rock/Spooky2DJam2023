@@ -2,10 +2,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.DialogOverlay.connect("branch_selected", branch_selected)
+	Global.connect("dialog_branch_selected", branch_selected)
 	pass # Replace with function body.
 
-func branch_selected(branch: Dictionary):
+func branch_selected(branch: Array):
 	print(branch)
 	pass
 

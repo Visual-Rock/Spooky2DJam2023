@@ -9,15 +9,8 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="7_f4de6"]
 
 [node name="game_intro" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-grow_horizontal = 2
-grow_vertical = 2
-scroll_offset = Vector2(-85, -310)
+layout_mode = 2
+scroll_offset = Vector2(38, -306)
 script = ExtResource("1_v8cm1")
 connections = Array[Dictionary]([{
 "from_node": &"StartDialogNode",
@@ -33,10 +26,10 @@ connections = Array[Dictionary]([{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_y2e36")]
 layout_mode = 0
-offset_left = -15.0
-offset_top = 210.0
-offset_right = 167.0
-offset_bottom = 433.0
+offset_left = -138.0
+offset_top = 206.0
+offset_right = 54.0
+offset_bottom = 438.0
 mouse_filter = 1
 position_offset = Vector2(-100, -100)
 resizable = true
@@ -77,10 +70,10 @@ dialog_values = Array[Dictionary]([{
 
 [node name="TextNode" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
 layout_mode = 0
-offset_left = 245.0
-offset_top = 210.0
-offset_right = 427.0
-offset_bottom = 433.0
+offset_left = 122.0
+offset_top = 206.0
+offset_right = 307.0
+offset_bottom = 440.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
@@ -123,10 +116,10 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_7v0gn")]
 layout_mode = 0
-offset_left = 505.0
-offset_top = 210.0
-offset_right = 687.0
-offset_bottom = 433.0
+offset_left = 382.0
+offset_top = 206.0
+offset_right = 571.0
+offset_bottom = 439.0
 mouse_filter = 1
 position_offset = Vector2(420, -100)
 resizable = true
