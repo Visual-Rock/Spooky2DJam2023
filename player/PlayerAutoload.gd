@@ -4,7 +4,7 @@ signal candela_changed()
 signal player_max_speed_changed(speed: int)
 signal player_stealth_factor_changed(stealth_factor: int)
 
-var candela : int = 0 : set = on_candela_set
+var candela : int = 100 : set = on_candela_set
 var lux : int = 400
 
 const max_candela : int = 100

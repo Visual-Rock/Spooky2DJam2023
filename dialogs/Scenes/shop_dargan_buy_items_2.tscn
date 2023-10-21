@@ -10,38 +10,38 @@
 
 [node name="shop_dargan_buy_items_2" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(9.99609, -132.331)
-zoom = 1.24832
+scroll_offset = Vector2(-115.022, -154.342)
+zoom = 0.671093
 script = ExtResource("1_jydqn")
 connections = Array[Dictionary]([{
-"from_node": &"BranchDialogNode",
+"from_node": &"StartDialogNode",
+"from_port": 0,
+"to_node": &"@GraphNode@23901",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@23901",
 "from_port": 0,
 "to_node": &"EndDialogNode",
 "to_port": 0
 }, {
-"from_node": &"BranchDialogNode",
+"from_node": &"@GraphNode@23901",
 "from_port": 1,
 "to_node": &"EndDialogNode",
 "to_port": 0
 }, {
-"from_node": &"StartDialogNode",
-"from_port": 0,
-"to_node": &"BranchDialogNode",
-"to_port": 0
-}, {
-"from_node": &"BranchDialogNode",
+"from_node": &"@GraphNode@23901",
 "from_port": 2,
-"to_node": &"EndDialogNode",
+"to_node": &"@GraphNode@23924",
 "to_port": 0
 }])
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_r5s1c")]
 layout_mode = 0
-offset_left = 39.9369
-offset_top = 32.4655
-offset_right = 203.937
-offset_bottom = 255.466
-scale = Vector2(1.24832, 1.24832)
+offset_left = 141.866
+offset_top = 100.655
+offset_right = 305.866
+offset_bottom = 323.655
+scale = Vector2(0.671093, 0.671093)
 mouse_filter = 1
 position_offset = Vector2(40, -80)
 resizable = true
@@ -81,62 +81,16 @@ dialog_values = Array[Dictionary]([{
 I see you brought {{lux_amount}} of your precious lux with you. Have a look around, you might find something valuable in return."
 }])
 
-[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
+[node name="@GraphNode@23901" type="GraphNode" parent="." instance=ExtResource("2_1ucsf")]
 layout_mode = 0
-offset_left = 564.233
-offset_top = 32.4655
-offset_right = 728.233
-offset_bottom = 255.466
-scale = Vector2(1.24832, 1.24832)
+offset_left = 302.928
+offset_top = 100.655
+offset_right = 489.928
+offset_bottom = 512.655
+scale = Vector2(0.671093, 0.671093)
 mouse_filter = 1
-position_offset = Vector2(460, -80)
+position_offset = Vector2(280, -80)
 resizable = true
-title = "End Node"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("5_45yjp")
-node_id = 3
-dialog_values = Array[Dictionary]([{
-"default": 0.0,
-"name": "Name",
-"selected": 2,
-"type": 0,
-"value": "Dargan",
-"values": ["Baldur", "Ziya", "Dargan"]
-}, {
-"default": "",
-"name": "Text",
-"type": 2,
-"value": "It was nice to do buisiness with you."
-}])
-
-[node name="BranchDialogNode" type="GraphNode" parent="." instance=ExtResource("2_1ucsf")]
-layout_mode = 0
-offset_left = 289.602
-offset_top = 32.4655
-offset_right = 476.602
-offset_bottom = 406.466
-scale = Vector2(1.24832, 1.24832)
-mouse_filter = 1
-position_offset = Vector2(240, -80)
-resizable = true
-selected = true
 title = "Branch Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -178,7 +132,7 @@ slot/4/left_enabled = false
 slot/4/left_type = 0
 slot/4/left_color = Color(1, 1, 1, 1)
 slot/4/left_icon = null
-slot/4/right_enabled = false
+slot/4/right_enabled = true
 slot/4/right_type = 0
 slot/4/right_color = Color(1, 1, 1, 1)
 slot/4/right_icon = null
@@ -219,6 +173,96 @@ dialog_values = Array[Dictionary]([{
 "type": 2,
 "value": "Ha, thats all I can offer for now.
 Choose wisly how you want to spend your {{lux_amount}} Lux."
+}])
+
+[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
+layout_mode = 0
+offset_left = 463.991
+offset_top = 100.655
+offset_right = 627.991
+offset_bottom = 323.655
+scale = Vector2(0.671093, 0.671093)
+mouse_filter = 1
+position_offset = Vector2(520, -80)
+resizable = true
+title = "End Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_45yjp")
+node_id = 3
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 2,
+"type": 0,
+"value": "Dargan",
+"values": ["Baldur", "Ziya", "Dargan"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "It was nice to do buisiness with you."
+}])
+
+[node name="@GraphNode@23924" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
+layout_mode = 0
+offset_left = 463.991
+offset_top = 261.717
+offset_right = 627.991
+offset_bottom = 484.717
+scale = Vector2(0.671093, 0.671093)
+mouse_filter = 1
+position_offset = Vector2(520, 160)
+resizable = true
+title = "End Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_45yjp")
+node_id = 3
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 2,
+"type": 0,
+"value": "Dargan",
+"values": ["Baldur", "Ziya", "Dargan"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Oh, okay. See you soon,"
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]
