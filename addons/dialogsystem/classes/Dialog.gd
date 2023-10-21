@@ -108,10 +108,12 @@ func get_branches_count() -> int:
 func get_branch(branch: int) -> Array[Dictionary]:
 	return get_branches()[branch]
 
-func get_branch_value(_branch: int, name: String):
+func get_branch_value(_branch: int, name: String, inject: bool = true):
 	var branch = get_branch(_branch)
 	for value in branch:
 		if value["name"] == name:
+			if inject && value["value"] is String:
+				return inject(value["value"])
 			return value["value"]
 
 func restart( reset_history: bool = true ) -> void:
