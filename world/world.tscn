@@ -242,7 +242,7 @@ position = Vector2(-153, -1430)
 scale = Vector2(11, 7.21875)
 
 [node name="Darkness11" parent="Darkness" instance=ExtResource("7_wfi1i")]
-position = Vector2(-505, -1412.17)
+position = Vector2(-505, -1412)
 scale = Vector2(11, 6.66146)
 
 [node name="Darkness12" parent="Darkness" instance=ExtResource("7_wfi1i")]
