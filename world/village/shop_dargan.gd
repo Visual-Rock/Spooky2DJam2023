@@ -4,16 +4,16 @@ var regex = RegEx.new()
 
 var stealth_name = "Stealth Cape"
 var stealth_prices = {
-	1: 40,
-	2: 50,
-	3: 60
+	1: 30,
+	2: 40,
+	3: 50
 }
 
 var shoes_name = "Faster Shoes"
 var shoe_prices = {
-	1: 40,
-	2: 50,
-	3: 60
+	1: 30,
+	2: 40,
+	3: 50
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -85,12 +85,13 @@ func _on_area_2d_area_entered(area):
 	elif canBuyShoes:
 		Global.DialogOverlay.show_dialog("shop_dargan_buy_items_1", {
 			"shop1_item1": _format_item(shoes_name, shoe_prices[shoes_lvl], shoes_lvl),
-			"lux_amount": PlayerAutoload.lux,
+			"lux_amount": PlayerAutoload.lux,"text": "I've got a item that might pique your interest. Check out this beauties! \nfor the speedster in you, how about these \"Supersonic Shoes\"? They're imbued with magic to make you run faster than the wind itself. These shoes channel your energy, making your movements quicker and more agile. You'll cover ground in no time, and those pesky shadows won't stand a chance.\nBut remember, lux is a precious resource in our world, and you'll want to spend it wisely. You got only " + str(PlayerAutoload.lux) + " Lux to spend."
 		})
 	elif canBuyStealth:
 		Global.DialogOverlay.show_dialog("shop_dargan_buy_items_1", {
 			"shop1_item1": _format_item(stealth_name, stealth_prices[stealth_lvl], stealth_lvl),
 			"lux_amount": PlayerAutoload.lux,
+			"text": "I've got a item that might pique your interest. Check out this beauties! \nThe \"Stealth Cape.\" With this magical garment, you can move silently, evading the gaze of any lurking enemies. Sneak past them like a shadow in the night!\nBut remember, lux is a precious resource in our world, and you'll want to spend it wisely. You got only " + str(PlayerAutoload.lux) + " Lux to spend."
 		})
 	else:
 		Global.DialogOverlay.show_dialog("shop_dargan_no_items", {

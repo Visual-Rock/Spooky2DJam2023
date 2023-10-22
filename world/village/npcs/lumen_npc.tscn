@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8hjug4vjt721"]
+
+[ext_resource type="Texture2D" uid="uid://ch8xwhkd8x1n6" path="res://assets/entities/Lumen.png" id="1_vmfda"]
+[ext_resource type="Script" path="res://world/village/npcs/lumen_npc.gd" id="1_x8qy0"]
+[ext_resource type="AudioStream" uid="uid://d3qfbvvfkhmgl" path="res://assets/sounds/misc/Magic_98_loop.ogg" id="3_cnhw4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_daegh"]
+radius = 5.09902
+
+[node name="lumen_npc" type="Node2D"]
+script = ExtResource("1_x8qy0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vmfda")
+vframes = 3
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_daegh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_cnhw4")
+volume_db = -7.879
+autoplay = true
+max_distance = 500.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

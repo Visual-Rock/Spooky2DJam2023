@@ -1,0 +1,30 @@
+Lumen:
+    Please help us!
+    They have taken us hostage. We, the lumens, are needed to make nature work.
+    We are the light that you see. The dark Lord Blackburn has captured us to spread his darkness.
+
+Baldur:
+    Sure. How can we help?
+
+Lumen:
+    Please go out into the darkness and look for them. But be aware that there are monsters out there who want to hurt you.
+
+Dargan:
+    Baldur, you have the torch, so at least you can see a little in the dark.
+    I can provide you with helpful upgrades, but I need Lux to make them work.
+
+Baldur:
+    Where do I get Lux from?
+
+Ziya:
+    I, Ziya, can help with that. But for that I need Candela.
+
+Baldur:
+    And where do I get Candela from?
+
+Lumen:
+    Each lumen has a certain amount of candela that it can give you if you save it.
+    But be aware that your torch gets brighter with each candela you collect, so convert them wisely.
+
+Baldur:
+    Okay. I'm going to save all lumens.

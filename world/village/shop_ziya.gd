@@ -14,12 +14,12 @@ func _process(delta):
 func branch_selected(branch: Array):
 	var value = branch[0]["value"]
 	
-	if value == "10 Candela > 3 Lux":
-		_convert_candela(10, 3)
-	elif value == "50 Candela > 17 Lux":
-		_convert_candela(50, 17)
-	elif value == "100 Candela > 36 Lux":
-		_convert_candela(100, 36)
+	if value == "10 Candela > 6 Lux":
+		_convert_candela(10, 6)
+	elif value == "50 Candela > 34 Lux":
+		_convert_candela(50, 34)
+	elif value == "100 Candela > 72 Lux":
+		_convert_candela(100, 72)
 	pass
 
 func _convert_candela(candela: int, to_lux: int):

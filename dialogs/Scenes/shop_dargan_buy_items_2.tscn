@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://l2bbldxfbrc4"]
+[gd_scene load_steps=8 format=3 uid="uid://vph4jfvvk2kh"]
 
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_jydqn"]
 [ext_resource type="PackedScene" uid="uid://q5r8aopwnccg" path="res://addons/dialogsystem/graph_editor/graph/nodes/branch_dialog_node.tscn" id="2_1ucsf"]
@@ -10,10 +10,10 @@
 
 [node name="shop_dargan_buy_items_2" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(-115.022, -154.342)
-zoom = 0.671093
+scroll_offset = Vector2(160.553, -86.3396)
+zoom = 0.812023
 script = ExtResource("1_jydqn")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"StartDialogNode",
 "from_port": 0,
 "to_node": &"@GraphNode@23901",
@@ -33,61 +33,15 @@ connections = Array[Dictionary]([{
 "from_port": 2,
 "to_node": &"@GraphNode@23924",
 "to_port": 0
-}])
-
-[node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_r5s1c")]
-layout_mode = 0
-offset_left = 141.866
-offset_top = 100.655
-offset_right = 305.866
-offset_bottom = 323.655
-scale = Vector2(0.671093, 0.671093)
-mouse_filter = 1
-position_offset = Vector2(40, -80)
-resizable = true
-title = "Start Node"
-slot/0/left_enabled = false
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = true
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("5_7vp3s")
-node_id = 0
-dialog_values = Array[Dictionary]([{
-"default": 0.0,
-"name": "Name",
-"selected": 2,
-"type": 0,
-"value": "Dargan",
-"values": ["Baldur", "Ziya", "Dargan"]
-}, {
-"default": "",
-"name": "Text",
-"type": 2,
-"value": "Hello dear friend. I have awaited you here for a long time.
-I see you brought {{lux_amount}} of your precious lux with you. Have a look around, you might find something valuable in return."
-}])
+}]
 
 [node name="@GraphNode@23901" type="GraphNode" parent="." instance=ExtResource("2_1ucsf")]
 layout_mode = 0
-offset_left = 302.928
-offset_top = 100.655
-offset_right = 489.928
-offset_bottom = 512.655
-scale = Vector2(0.671093, 0.671093)
+offset_left = 66.8134
+offset_top = 21.3778
+offset_right = 555.854
+offset_bottom = 441.789
+scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
 position_offset = Vector2(280, -80)
 resizable = true
@@ -154,11 +108,11 @@ branches = Array[Array]([Array[Dictionary]([{
 "type": 1,
 "value": "Exit"
 }])])
-branch_template = Array[Dictionary]([{
+branch_template = [{
 "default": "",
 "name": "Text",
 "type": 1.0
-}])
+}]
 node_id = 2
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
@@ -171,19 +125,69 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Ha, thats all I can offer for now.
-Choose wisly how you want to spend your {{lux_amount}} Lux."
+"value": "I've got some new items that might pique your interest. Check out these beauties!
+Feast your eyes on this, the \"Stealth Cape.\" With this magical garment, you can move silently, evading the gaze of any lurking enemies. Sneak past them like a shadow in the night!
+And for the speedster in you, how about these \"Supersonic Shoes\"? They're imbued with magic to make you run faster than the wind itself. These shoes channel your energy, making your movements quicker and more agile. You'll cover ground in no time, and those pesky shadows won't stand a chance.
+But remember, lux is a precious resource in our world, and you'll want to spend it wisely. You got only {{lux_amount}} Lux to spend.
+"
+}])
+
+[node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_r5s1c")]
+layout_mode = 0
+offset_left = -517.843
+offset_top = 37.6182
+offset_right = 89.1545
+offset_bottom = 482.433
+scale = Vector2(0.812023, 0.812023)
+mouse_filter = 1
+position_offset = Vector2(-440, -60)
+resizable = true
+title = "Start Node"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_7vp3s")
+node_id = 0
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 2,
+"type": 0,
+"value": "Dargan",
+"values": ["Baldur", "Ziya", "Dargan"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Ah, Baldur, my friend! What brings you to my humble abode today?
+I've heard you want to trade some of your {{lux_amount}} Lux? I got the best gadgets and gizmos to help you on your quest to save the lumens!
+Take a look around, you might find something valuable in return."
 }])
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
 layout_mode = 0
-offset_left = 463.991
-offset_top = 100.655
-offset_right = 627.991
-offset_bottom = 323.655
-scale = Vector2(0.671093, 0.671093)
+offset_left = 505.306
+offset_top = 37.6182
+offset_right = 944.972
+offset_bottom = 292.697
+scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
-position_offset = Vector2(520, -80)
+position_offset = Vector2(820, -60)
 resizable = true
 title = "End Node"
 slot/0/left_enabled = true
@@ -217,19 +221,21 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "It was nice to do buisiness with you."
+"value": "It's been a pleasure doing business with you, Baldur. Your lux help keep my shop running, and I'm always here to support your mission.
+Remember, the shadows may be dark, but your light shines brighter with every step. Farewell for now, and may luck guide your way."
 }])
 
 [node name="@GraphNode@23924" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
 layout_mode = 0
-offset_left = 463.991
-offset_top = 261.717
-offset_right = 627.991
-offset_bottom = 484.717
-scale = Vector2(0.671093, 0.671093)
+offset_left = 537.786
+offset_top = 264.984
+offset_right = 768.287
+offset_bottom = 487.984
+scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
-position_offset = Vector2(520, 160)
+position_offset = Vector2(860, 220)
 resizable = true
+selected = true
 title = "End Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0

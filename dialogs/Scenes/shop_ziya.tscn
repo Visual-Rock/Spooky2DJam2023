@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnmn5ca7u4m8w"]
+[gd_scene load_steps=8 format=3 uid="uid://c1wisyp4kyclq"]
 
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_yilnt"]
 [ext_resource type="PackedScene" uid="uid://q5r8aopwnccg" path="res://addons/dialogsystem/graph_editor/graph/nodes/branch_dialog_node.tscn" id="2_h75xb"]
@@ -9,11 +9,11 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="7_r6ohx"]
 
 [node name="shop_ziya" type="GraphEdit"]
-visible = false
 layout_mode = 2
-scroll_offset = Vector2(429.92, -279.52)
+scroll_offset = Vector2(875.923, -281.265)
+zoom = 1.61051
 script = ExtResource("1_yilnt")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"BranchDialogNode",
 "from_port": 3,
 "to_node": &"@GraphNode@23850",
@@ -38,14 +38,15 @@ connections = Array[Dictionary]([{
 "from_port": 0,
 "to_node": &"BranchDialogNode",
 "to_port": 0
-}])
+}]
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_41a04")]
 layout_mode = 0
-offset_left = -9.92001
-offset_top = 119.52
-offset_right = 154.08
-offset_bottom = 342.52
+offset_left = -199.508
+offset_top = 23.5835
+offset_right = -35.5085
+offset_bottom = 246.583
+scale = Vector2(1.61051, 1.61051)
 mouse_filter = 1
 position_offset = Vector2(420, -160)
 resizable = true
@@ -87,10 +88,11 @@ But keep in mind that candela is the fuel to your torch. Trade wisely."
 
 [node name="BranchDialogNode" type="GraphNode" parent="." instance=ExtResource("2_h75xb")]
 layout_mode = 0
-offset_left = 230.08
-offset_top = 79.52
-offset_right = 417.08
-offset_bottom = 491.52
+offset_left = 187.014
+offset_top = -40.8369
+offset_right = 446.662
+offset_bottom = 379.856
+scale = Vector2(1.61051, 1.61051)
 mouse_filter = 1
 position_offset = Vector2(660, -200)
 resizable = true
@@ -154,28 +156,28 @@ branches = Array[Array]([Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 1,
-"value": "10 Candela > 3 Lux"
+"value": "10 Candela > 6 Lux"
 }]), Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 1,
-"value": "50 Candela > 17 Lux"
+"value": "50 Candela > 34 Lux"
 }]), Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 1,
-"value": "100 Candela > 36 Lux"
+"value": "100 Candela > 72 Lux"
 }]), Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 1,
 "value": "Exit"
 }])])
-branch_template = Array[Dictionary]([{
+branch_template = [{
 "default": "",
 "name": "Text",
 "type": 1.0
-}])
+}]
 node_id = 2
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
@@ -191,14 +193,15 @@ dialog_values = Array[Dictionary]([{
 "value": ""
 }])
 
-[node name="@GraphNode@23850" type="GraphNode" parent="." instance=ExtResource("6_gd7bt")]
+[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_gd7bt")]
 layout_mode = 0
-offset_left = 510.08
-offset_top = 279.52
-offset_right = 674.08
-offset_bottom = 502.52
+offset_left = 702.377
+offset_top = -137.468
+offset_right = 866.377
+offset_bottom = 85.5325
+scale = Vector2(1.61051, 1.61051)
 mouse_filter = 1
-position_offset = Vector2(940, 0)
+position_offset = Vector2(980, -260)
 resizable = true
 title = "End Node"
 slot/0/left_enabled = true
@@ -232,17 +235,18 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Oh, okay. See you soon."
+"value": "Great Business"
 }])
 
-[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_gd7bt")]
+[node name="@GraphNode@23850" type="GraphNode" parent="." instance=ExtResource("6_gd7bt")]
 layout_mode = 0
-offset_left = 510.08
-offset_top = 19.52
-offset_right = 674.08
-offset_bottom = 242.52
+offset_left = 702.377
+offset_top = 281.265
+offset_right = 866.377
+offset_bottom = 504.265
+scale = Vector2(1.61051, 1.61051)
 mouse_filter = 1
-position_offset = Vector2(940, -260)
+position_offset = Vector2(980, 0)
 resizable = true
 selected = true
 title = "End Node"
@@ -277,7 +281,7 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Great Business"
+"value": "Oh, okay. See you soon."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

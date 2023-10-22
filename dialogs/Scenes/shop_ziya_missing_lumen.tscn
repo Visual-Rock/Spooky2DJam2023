@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://7dwgv2f3vyks"]
+[gd_scene load_steps=6 format=3 uid="uid://cl55f05yjgcnu"]
 
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_c8gjm"]
 [ext_resource type="PackedScene" uid="uid://bd3o0iklnhpji" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.tscn" id="2_uqagf"]
@@ -8,21 +8,20 @@
 
 [node name="shop_ziya_missing_lumen" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(453.92, -246.88)
 script = ExtResource("1_c8gjm")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"StartDialogNode",
 "from_port": 0,
 "to_node": &"EndDialogNode",
 "to_port": 0
-}])
+}]
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_uqagf")]
 layout_mode = 0
-offset_left = 64.08
-offset_top = 89.88
-offset_right = 228.08
-offset_bottom = 312.88
+offset_left = 518.0
+offset_top = -157.0
+offset_right = 682.0
+offset_bottom = 66.0
 mouse_filter = 1
 position_offset = Vector2(518, -157)
 resizable = true
@@ -63,10 +62,10 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_a7gy1")]
 layout_mode = 0
-offset_left = 286.08
-offset_top = 66.88
-offset_right = 614.08
-offset_bottom = 344.88
+offset_left = 740.0
+offset_top = -180.0
+offset_right = 1068.0
+offset_bottom = 98.0
 mouse_filter = 1
 position_offset = Vector2(740, -180)
 resizable = true

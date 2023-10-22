@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d31a28s8slipy"]
+[gd_scene load_steps=6 format=3 uid="uid://d0oopwejhtnnb"]
 
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_7gfj5"]
 [ext_resource type="PackedScene" uid="uid://b0v61db2akncq" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.tscn" id="2_12u8f"]
@@ -7,10 +7,9 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.gd" id="5_ypunb"]
 
 [node name="shop_dargan_missing_lux" type="GraphEdit"]
-visible = false
 layout_mode = 2
-scroll_offset = Vector2(412.8, -289.92)
-zoom = 1.2144
+scroll_offset = Vector2(281.989, -194.623)
+zoom = 0.912397
 script = ExtResource("1_7gfj5")
 connections = [{
 "from_node": &"StartDialogNode",
@@ -19,61 +18,15 @@ connections = [{
 "to_port": 0
 }]
 
-[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("2_12u8f")]
-layout_mode = 0
-offset_left = 340.128
-offset_top = 144.192
-offset_right = 504.129
-offset_bottom = 367.192
-scale = Vector2(1.2144, 1.2144)
-mouse_filter = 1
-position_offset = Vector2(620, -120)
-resizable = true
-title = "End Node"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("3_0vaf3")
-node_id = 3
-dialog_values = Array[Dictionary]([{
-"default": 0.0,
-"name": "Name",
-"selected": 2,
-"type": 0,
-"value": "Dargan",
-"values": ["Baldur", "Ziya", "Dargan"]
-}, {
-"default": "",
-"name": "Text",
-"type": 2,
-"value": "Hey?! It seems like you dont got enought lux to buy {{item}}. You can check back to Ziya to trade some of your precious candela to lux.
-See you next time my dear friend!"
-}])
-
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_w4myf")]
 layout_mode = 0
-offset_left = 97.248
-offset_top = 144.192
-offset_right = 261.248
-offset_bottom = 367.192
-scale = Vector2(1.2144, 1.2144)
+offset_left = 64.7213
+offset_top = 85.1355
+offset_right = 269.894
+offset_bottom = 313.9
+scale = Vector2(0.912397, 0.912397)
 mouse_filter = 1
-position_offset = Vector2(420, -120)
+position_offset = Vector2(380, -120)
 resizable = true
 title = "Start Node"
 slot/0/left_enabled = false
@@ -108,6 +61,53 @@ dialog_values = Array[Dictionary]([{
 "name": "Text",
 "type": 2,
 "value": "please dont see this"
+}])
+
+[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("2_12u8f")]
+layout_mode = 0
+offset_left = 283.697
+offset_top = 85.1355
+offset_right = 786.397
+offset_bottom = 321.256
+scale = Vector2(0.912397, 0.912397)
+mouse_filter = 1
+position_offset = Vector2(620, -120)
+resizable = true
+selected = true
+title = "End Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("3_0vaf3")
+node_id = 3
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 2,
+"type": 0,
+"value": "Dargan",
+"values": ["Baldur", "Ziya", "Dargan"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Hey?! It seems like you dont got enought lux to buy {{item}}. You can check back to Ziya to trade some of your candela to lux.
+See you next time my dear friend!"
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

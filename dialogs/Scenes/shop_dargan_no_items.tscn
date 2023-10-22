@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpfklj4v885cv"]
+[gd_scene load_steps=6 format=3 uid="uid://dlnpnhl6eriwo"]
 
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_oi4nn"]
 [ext_resource type="PackedScene" uid="uid://bd3o0iklnhpji" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.tscn" id="2_cuxsi"]
@@ -8,25 +8,25 @@
 
 [node name="shop_dargan_no_items" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(228.615, -294.018)
+scroll_offset = Vector2(385, -314)
 zoom = 0.997015
 script = ExtResource("1_oi4nn")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"StartDialogNode",
 "from_port": 0,
 "to_node": &"EndDialogNode",
 "to_port": 0
-}])
+}]
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_cuxsi")]
 layout_mode = 0
-offset_left = 290.399
-offset_top = 102.259
-offset_right = 454.399
-offset_bottom = 325.259
+offset_left = -325.179
+offset_top = 114.597
+offset_right = 309.225
+offset_bottom = 405.801
 scale = Vector2(0.997015, 0.997015)
 mouse_filter = 1
-position_offset = Vector2(520.568, -192.334)
+position_offset = Vector2(60, -200)
 resizable = true
 title = "Start Node"
 slot/0/left_enabled = false
@@ -52,28 +52,30 @@ node_id = 0
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
 "name": "Name",
-"selected": 0,
+"selected": 2,
 "type": 0,
-"value": "Baldur",
+"value": "Dargan",
 "values": ["Baldur", "Ziya", "Dargan"]
 }, {
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Hello dear friend. I have awaited you here for a long time.
-I see you brought {{lux_amount}} of your precious lux with you. Have a look around, you might find something valuable in return."
+"value": "Ah, Baldur, my friend! What brings you to my humble abode today?
+I've heard you want to trade some of your {{lux_amount}} Lux? I got the best gadgets and gizmos to help you on your quest to save the lumens!
+Take a look around, you might find something valuable in return."
 }])
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_0jxqv")]
 layout_mode = 0
-offset_left = 489.236
-offset_top = 94.6153
-offset_right = 653.236
-offset_bottom = 317.615
+offset_left = 332.851
+offset_top = 114.597
+offset_right = 709.486
+offset_bottom = 375.711
 scale = Vector2(0.997015, 0.997015)
 mouse_filter = 1
 position_offset = Vector2(720, -200)
 resizable = true
+selected = true
 title = "End Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -98,15 +100,16 @@ node_id = 3
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
 "name": "Name",
-"selected": 0,
+"selected": 2,
 "type": 0,
-"value": "Baldur",
+"value": "Dargan",
 "values": ["Baldur", "Ziya", "Dargan"]
 }, {
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Oh, I dont have anything to over for now."
+"value": "Baldur, I must admit, it seems that my shop is currently empty. I'm in the process of restocking and crafting new marvels for your adventure.
+Until then, be safe out there, and we'll meet again soon."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

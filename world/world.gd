@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.init()
+	PlayerAutoload.connect("player_won", player_won)
 	
 	Console.add_command("set", _on_set_command, 2)
 	Console.add_command("get", _on_get_command, 1)
@@ -15,6 +16,8 @@ func _on_set_command(param: String, param2: String) -> void:
 		PlayerAutoload.player_max_speed = int(param2)
 	elif param == "lux":
 		PlayerAutoload.lux = int(param2)
+	elif param == "stealth":
+		PlayerAutoload.stealth_lvl = int(param2)
 
 func _on_get_command(param: String) -> void:
 	if param == "candela":
@@ -23,3 +26,8 @@ func _on_get_command(param: String) -> void:
 		Console.print_line(str(PlayerAutoload.player_max_speed))
 	elif param == "lux":
 		Console.print_line(str(PlayerAutoload.lux))
+
+func player_won() -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property($"CanvasLayer/Control/ColorRect", "color", Color.BLACK, 0.5)
+	tween.tween_callback(func(): get_tree().change_scene_to_file("res://end_screen.tscn"))

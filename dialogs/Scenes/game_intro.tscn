@@ -10,7 +10,9 @@
 
 [node name="game_intro" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(38, -306)
+scroll_offset = Vector2(631.172, -162.327)
+zoom = 0.49853
+minimap_size = Vector2(138, 86)
 script = ExtResource("1_v8cm1")
 connections = Array[Dictionary]([{
 "from_node": &"StartDialogNode",
@@ -20,60 +22,47 @@ connections = Array[Dictionary]([{
 }, {
 "from_node": &"TextNode",
 "from_port": 0,
+"to_node": &"@GraphNode@114648",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@114648",
+"from_port": 0,
+"to_node": &"@GraphNode@114603",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@114603",
+"from_port": 0,
+"to_node": &"@GraphNode@114588",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@114588",
+"from_port": 0,
+"to_node": &"@GraphNode@114633",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@114633",
+"from_port": 0,
+"to_node": &"@GraphNode@114618",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@114618",
+"from_port": 0,
+"to_node": &"@GraphNode@115078",
+"to_port": 0
+}, {
+"from_node": &"@GraphNode@115078",
+"from_port": 0,
 "to_node": &"EndDialogNode",
 "to_port": 0
 }])
 
-[node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_y2e36")]
-layout_mode = 0
-offset_left = -138.0
-offset_top = 206.0
-offset_right = 54.0
-offset_bottom = 438.0
-mouse_filter = 1
-position_offset = Vector2(-100, -100)
-resizable = true
-title = "Start Node"
-slot/0/left_enabled = false
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = true
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("3_s8tor")
-node_id = 0
-dialog_values = Array[Dictionary]([{
-"default": 0.0,
-"name": "Name",
-"selected": 0,
-"type": 0,
-"value": "Baldur",
-"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
-}, {
-"default": "",
-"name": "Text",
-"type": 2,
-"value": ""
-}])
-
 [node name="TextNode" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
 layout_mode = 0
-offset_left = 122.0
-offset_top = 206.0
-offset_right = 307.0
-offset_bottom = 440.0
+offset_left = -551.407
+offset_top = 112.474
+offset_right = -291.407
+offset_bottom = 344.473
+scale = Vector2(0.49853, 0.49853)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
@@ -111,17 +100,349 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": ""
+"value": "Sure. How can we help?"
+}])
+
+[node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_y2e36")]
+layout_mode = 0
+offset_left = -700.966
+offset_top = 112.474
+offset_right = -432.966
+offset_bottom = 339.473
+scale = Vector2(0.49853, 0.49853)
+mouse_filter = 1
+position_offset = Vector2(-140, -100)
+resizable = true
+title = "Start Node"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("3_s8tor")
+node_id = 0
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 1,
+"type": 0,
+"value": "Lumen",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Please help us!
+They have taken us hostage. We, the lumens, are needed to make nature work.
+We are the light that you see. The dark Lord Blackburn has captured us to spread his darkness."
+}])
+
+[node name="@GraphNode@114648" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
+layout_mode = 0
+offset_left = -401.848
+offset_top = 112.474
+offset_right = -149.848
+offset_bottom = 345.474
+scale = Vector2(0.49853, 0.49853)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+position_offset = Vector2(460, -100)
+resizable = true
+title = "Text Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_yskfh")
+node_id = 1
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 1,
+"type": 0,
+"value": "Lumen",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Please go out into the darkness and look for them. But be aware that there are monsters out there who want to hurt you."
+}])
+
+[node name="@GraphNode@114603" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
+layout_mode = 0
+offset_left = -252.289
+offset_top = 112.474
+offset_right = -13.0164
+offset_bottom = 346.383
+scale = Vector2(0.49853, 0.49853)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+position_offset = Vector2(760, -100)
+resizable = true
+title = "Text Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_yskfh")
+node_id = 1
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 3,
+"type": 0,
+"value": "Dargan",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Baldur, you have the torch, so at least you can see a little in the dark.
+I can provide you with helpful upgrades, but I need Lux to make them work."
+}])
+
+[node name="@GraphNode@114588" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
+layout_mode = 0
+offset_left = -102.73
+offset_top = 112.474
+offset_right = 111.088
+offset_bottom = 351.837
+scale = Vector2(0.49853, 0.49853)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+position_offset = Vector2(1060, -100)
+resizable = true
+title = "Text Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_yskfh")
+node_id = 1
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 0,
+"type": 0,
+"value": "Baldur",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Where do I get Lux from?"
+}])
+
+[node name="@GraphNode@114633" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
+layout_mode = 0
+offset_left = 36.8586
+offset_top = 112.474
+offset_right = 297.041
+offset_bottom = 365.473
+scale = Vector2(0.49853, 0.49853)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+position_offset = Vector2(1340, -100)
+resizable = true
+title = "Text Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_yskfh")
+node_id = 1
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 2,
+"type": 0,
+"value": "Ziya",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "I, Ziya, can help with that. But for that I need Candela."
+}])
+
+[node name="@GraphNode@114618" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
+layout_mode = 0
+offset_left = 196.388
+offset_top = 112.474
+offset_right = 460.206
+offset_bottom = 380.019
+scale = Vector2(0.49853, 0.49853)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+position_offset = Vector2(1660, -100)
+resizable = true
+title = "Text Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_yskfh")
+node_id = 1
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 0,
+"type": 0,
+"value": "Baldur",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "And where do I get Candela from?"
+}])
+
+[node name="@GraphNode@115078" type="GraphNode" parent="." instance=ExtResource("4_1nj7q")]
+layout_mode = 0
+offset_left = 365.889
+offset_top = 112.474
+offset_right = 589.707
+offset_bottom = 363.655
+scale = Vector2(0.49853, 0.49853)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+position_offset = Vector2(2000, -100)
+resizable = true
+title = "Text Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_yskfh")
+node_id = 1
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 1,
+"type": 0,
+"value": "Lumen",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "Each lumen has a certain amount of candela that it can give you if you save it.
+But be aware that your torch gets brighter with each candela you collect, so convert them wisely"
 }])
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_7v0gn")]
 layout_mode = 0
-offset_left = 382.0
-offset_top = 206.0
-offset_right = 571.0
-offset_bottom = 439.0
+offset_left = 495.506
+offset_top = 112.474
+offset_right = 751.749
+offset_bottom = 395.796
+scale = Vector2(0.49853, 0.49853)
 mouse_filter = 1
-position_offset = Vector2(420, -100)
+position_offset = Vector2(2260, -100)
 resizable = true
 title = "End Node"
 slot/0/left_enabled = true
@@ -155,7 +476,7 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": ""
+"value": "Okay. I'm going to save all lumens."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

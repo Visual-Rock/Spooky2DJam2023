@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ch3ade6314mc6"]
+[gd_scene load_steps=8 format=3 uid="uid://c2033k8uy8xe2"]
 
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_haua6"]
 [ext_resource type="PackedScene" uid="uid://q5r8aopwnccg" path="res://addons/dialogsystem/graph_editor/graph/nodes/branch_dialog_node.tscn" id="2_aqstr"]
@@ -10,10 +10,10 @@
 
 [node name="shop_dargan_buy_items_1" type="GraphEdit"]
 layout_mode = 2
-scroll_offset = Vector2(-106.648, -64.1606)
-zoom = 0.557617
+scroll_offset = Vector2(-270.075, -58.3991)
+zoom = 0.674716
 script = ExtResource("1_haua6")
-connections = Array[Dictionary]([{
+connections = [{
 "from_node": &"StartDialogNode",
 "from_port": 0,
 "to_node": &"@GraphNode@24015",
@@ -28,17 +28,17 @@ connections = Array[Dictionary]([{
 "from_port": 1,
 "to_node": &"@GraphNode@24030",
 "to_port": 0
-}])
+}]
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("6_wvr6w")]
 layout_mode = 0
-offset_left = 219.452
-offset_top = 126.508
-offset_right = 383.453
-offset_bottom = 349.508
-scale = Vector2(0.557617, 0.557617)
+offset_left = -256.204
+offset_top = 179.848
+offset_right = -17.9465
+offset_bottom = 438.189
+scale = Vector2(0.674716, 0.674716)
 mouse_filter = 1
-position_offset = Vector2(202.298, 111.81)
+position_offset = Vector2(-780, 180)
 resizable = true
 title = "Start Node"
 slot/0/left_enabled = false
@@ -64,27 +64,28 @@ node_id = 0
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
 "name": "Name",
-"selected": 0,
+"selected": 2,
 "type": 0,
-"value": "Baldur",
+"value": "Dargan",
 "values": ["Baldur", "Ziya", "Dargan"]
 }, {
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Hello dear friend. I have awaited you here for a long time.
-I see you brought {{lux_amount}} of your precious lux with you. Have a look around, you might find something valuable in return."
+"value": "Ah, Baldur, my friend! What brings you to my humble abode today?
+I've heard you want to trade some of your {{lux_amount}} Lux? I got the best gadgets and gizmos to help you on your quest to save the lumens!
+Take a look around, you might find something valuable in return."
 }])
 
 [node name="@GraphNode@24015" type="GraphNode" parent="." instance=ExtResource("2_aqstr")]
 layout_mode = 0
-offset_left = 340.847
-offset_top = 131.075
-offset_right = 527.847
-offset_bottom = 543.075
-scale = Vector2(0.557617, 0.557617)
+offset_left = 148.626
+offset_top = 139.365
+offset_right = 1280.17
+offset_bottom = 807.832
+scale = Vector2(0.674716, 0.674716)
 mouse_filter = 1
-position_offset = Vector2(420, 120)
+position_offset = Vector2(-180, 120)
 resizable = true
 title = "Branch Node"
 slot/0/left_enabled = true
@@ -135,11 +136,11 @@ branches = Array[Array]([Array[Dictionary]([{
 "type": 1,
 "value": "Exit"
 }])])
-branch_template = Array[Dictionary]([{
+branch_template = [{
 "default": "",
 "name": "Text",
 "type": 1.0
-}])
+}]
 node_id = 2
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
@@ -152,20 +153,66 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Ha, thats all I can offer for now.
-Choose wisly how you want to spend your {{lux_amount}} Lux."
+"value": "{{text}}"
+}])
+
+[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_42cqe")]
+layout_mode = 0
+offset_left = 958.285
+offset_top = 112.376
+offset_right = 1343.88
+offset_bottom = 375.463
+scale = Vector2(0.674716, 0.674716)
+mouse_filter = 1
+position_offset = Vector2(1020, 80)
+resizable = true
+title = "End Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_x5noj")
+node_id = 3
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 2,
+"type": 0,
+"value": "Dargan",
+"values": ["Baldur", "Ziya", "Dargan"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "It's been a pleasure doing business with you, Baldur. Your lux help keep my shop running, and I'm always here to support your mission.
+Remember, the shadows may be dark, but your light shines brighter with every step. Farewell for now, and may luck guide your way."
 }])
 
 [node name="@GraphNode@24030" type="GraphNode" parent="." instance=ExtResource("4_42cqe")]
 layout_mode = 0
-offset_left = 508.132
-offset_top = 276.055
-offset_right = 672.132
-offset_bottom = 499.055
-scale = Vector2(0.557617, 0.557617)
+offset_left = 971.78
+offset_top = 314.791
+offset_right = 1433.09
+offset_bottom = 550.04
+scale = Vector2(0.674716, 0.674716)
 mouse_filter = 1
-position_offset = Vector2(720, 380)
+position_offset = Vector2(1040, 380)
 resizable = true
+selected = true
 title = "End Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -199,52 +246,6 @@ dialog_values = Array[Dictionary]([{
 "name": "Text",
 "type": 2,
 "value": "Oh, okay. See you soon!"
-}])
-
-[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_42cqe")]
-layout_mode = 0
-offset_left = 530.437
-offset_top = 131.075
-offset_right = 694.437
-offset_bottom = 354.075
-scale = Vector2(0.557617, 0.557617)
-mouse_filter = 1
-position_offset = Vector2(760, 120)
-resizable = true
-selected = true
-title = "End Node"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("5_x5noj")
-node_id = 3
-dialog_values = Array[Dictionary]([{
-"default": 0.0,
-"name": "Name",
-"selected": 0,
-"type": 0,
-"value": "Baldur",
-"values": ["Baldur", "Ziya", "Dargan"]
-}, {
-"default": "",
-"name": "Text",
-"type": 2,
-"value": "It was nice to do buisiness with you."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

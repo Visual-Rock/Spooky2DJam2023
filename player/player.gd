@@ -15,9 +15,17 @@ func _ready():
 	PlayerAutoload.player = self
 	PlayerAutoload.connect("player_max_speed_changed", func(x): max_speed = x)
 	respawn_pos = global_position
+	update_labels()
+	
+	PlayerAutoload.connect("candela_changed", func(): update_labels())
+	PlayerAutoload.connect("lux_changed", func(): update_labels())
+
+func update_labels() -> void:
+	$"CanvasLayer/Control/VBoxContainer/Candela".text = "Candela: " + str(PlayerAutoload.candela)
+	$"CanvasLayer/Control/VBoxContainer/Lux".text = "Lux: " + str(PlayerAutoload.lux)
 
 func _physics_process(delta):
-	$"CanvasLayer/Control/FPS".text = "FPS: " + str(Engine.get_frames_per_second())
+	$"CanvasLayer/Control/VBoxContainer/FPS".text = "FPS: " + str(Engine.get_frames_per_second())
 	if !dead:
 		var direction = Input.get_vector("left", "right", "up", "down").normalized()
 		if direction != Vector2.ZERO && max_speed != 0:
