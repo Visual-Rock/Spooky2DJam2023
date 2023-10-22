@@ -10,11 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Spooky 2d Jam 2023"
+config/name="NoLux"
+config/description="No Lux: a Story of Light and Darkness"
+config/version="1.0"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/image="res://Icon.png"
-config/icon="res://icon.svg"
+config/icon="res://Icon.png"
 
 [autoload]
 
