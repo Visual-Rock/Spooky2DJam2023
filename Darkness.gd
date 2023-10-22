@@ -36,7 +36,11 @@ func load_light() -> void:
 
 func _physics_process(delta):
 	if last_lumen_pos_size != PlayerAutoload.lumen_positions.size():
-		pass
+		last_lumen_pos_size = PlayerAutoload.lumen_positions.size()
+		var global_texture_rect = Rect2(global_position - Vector2(64, 64) * 6, (original_darkness_texture.get_size() + Vector2(128, 128)) * 6)
+		for pos in PlayerAutoload.lumen_positions:
+			if  global_texture_rect.has_point(pos):
+				lumen_positions.append(pos)
 	if PlayerAutoload.player != null:
 		var torch_pos = PlayerAutoload.player.TorchPosition.global_position
 		var global_texture_rect = Rect2(global_position - Vector2(64, 64) * 6, (original_darkness_texture.get_size() + Vector2(128, 128)) * 6)
@@ -49,4 +53,6 @@ func update_texture() -> void:
 	var rect = Rect2(Vector2.ZERO, original_light_image.get_size())
 	var tmp = Vector2(original_light_image.get_width() / 2, original_light_image.get_height() / 2) * 6
 	new_image.blend_rect(original_light_image, rect, (last_torch_pos - global_position - tmp) / 6)
+	#for pos in lumen_positions:
+	#	new_image.blend_rect(original_light_image, rect, (pos - global_position - tmp) / 6)
 	texture = ImageTexture.new().create_from_image(new_image)

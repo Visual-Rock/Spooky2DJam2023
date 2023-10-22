@@ -3,7 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Global.init()
+	get_parent().remove_child(Global.DialogOverlay)
+	get_parent().add_child(Global.DialogOverlay)
 	PlayerAutoload.connect("player_won", player_won)
 	
 	Console.add_command("set", _on_set_command, 2)

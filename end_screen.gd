@@ -17,8 +17,7 @@ func proceed():
 		0:
 			$"AnimationPlayer".play("battle")
 		1:
-			# play credits or back to menu
-			pass
+			get_tree().change_scene_to_file("res://main_menu.tscn")
 	dialog += 1
 
 func ready() -> void:

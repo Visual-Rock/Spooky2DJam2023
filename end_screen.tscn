@@ -9,48 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://r3ca22dntvcw" path="res://world/dungeon/blackburn.tscn" id="7_73x67"]
 [ext_resource type="Texture2D" uid="uid://octjxlinn5ir" path="res://assets/world/Pumpkins.png" id="8_ndg86"]
 
-[sub_resource type="Animation" id="Animation_148py"]
-resource_name = "play"
-length = 1.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, -70)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.9, 1.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, -20)]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1.3),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"first_dialog"
-}]
-}
-
 [sub_resource type="Animation" id="Animation_5viho"]
 length = 0.001
 tracks/0/type = "value"
@@ -181,6 +139,48 @@ tracks/4/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_148py"]
+resource_name = "play"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, -20)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"first_dialog"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2ylhj"]
 _data = {
 "RESET": SubResource("Animation_5viho"),
@@ -301,12 +301,11 @@ position = Vector2(21, 70.6667)
 position = Vector2(4.33333, 101.167)
 
 [node name="Blackburn" parent="." instance=ExtResource("7_73x67")]
-position = Vector2(-1, -60.6667)
-scale = Vector2(0.1, 0.1)
+position = Vector2(-1, -71.3333)
 
 [node name="Pumpkins" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -62)
+position = Vector2(9.53674e-07, -99.3333)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("8_ndg86")
 hframes = 2

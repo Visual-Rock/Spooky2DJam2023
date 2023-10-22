@@ -1,20 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3skeyfwbjjk8"]
+[gd_scene load_steps=6 format=3 uid="uid://b3skeyfwbjjk8"]
 
 [ext_resource type="Script" path="res://world/village/shop_ziya.gd" id="1_8l0ij"]
 [ext_resource type="PackedScene" uid="uid://cn42bwgkybwqv" path="res://world/village/npcs/Ziya.tscn" id="2_15kqs"]
+[ext_resource type="Texture2D" uid="uid://bv11e7j17nvx4" path="res://assets/structures/house_shop.png" id="2_e2lpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lx14i"]
+size = Vector2(52, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xs3f1"]
-size = Vector2(26, 28)
+size = Vector2(14, 15)
 
 [node name="ShopZiya" type="Node2D"]
 script = ExtResource("1_8l0ij")
 
+[node name="House" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -15)
+texture = ExtResource("2_e2lpl")
+
 [node name="Ziya" parent="." instance=ExtResource("2_15kqs")]
-position = Vector2(0, -7)
+position = Vector2(-15, 5)
+
+[node name="HouseCollisionArea" type="StaticBody2D" parent="."]
+position = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseCollisionArea"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_lx14i")
+debug_color = Color(0.886275, 0.294118, 0.384314, 0.419608)
 
 [node name="ZiyaCollisionArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZiyaCollisionArea"]
+position = Vector2(-16, 8.5)
 shape = SubResource("RectangleShape2D_xs3f1")
 
 [connection signal="area_entered" from="ZiyaCollisionArea" to="." method="_on_ziya_collision_area_area_entered"]
