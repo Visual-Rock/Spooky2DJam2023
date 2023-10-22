@@ -13,6 +13,7 @@ config_version=5
 config/name="Spooky 2d Jam 2023"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/image="res://Icon.png"
 config/icon="res://icon.svg"
 
 [autoload]
