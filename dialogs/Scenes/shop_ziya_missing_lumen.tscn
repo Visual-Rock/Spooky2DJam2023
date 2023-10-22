@@ -7,13 +7,9 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="5_cv3xk"]
 
 [node name="shop_ziya_missing_lumen" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(394, -290)
+layout_mode = 2
+scroll_offset = Vector2(508.851, -339.571)
+zoom = 1.331
 script = ExtResource("1_c8gjm")
 connections = [{
 "from_node": &"StartDialogNode",
@@ -24,10 +20,11 @@ connections = [{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_uqagf")]
 layout_mode = 0
-offset_left = 124.0
-offset_top = 133.0
-offset_right = 288.0
-offset_bottom = 356.0
+offset_left = 180.607
+offset_top = 130.604
+offset_right = 379.919
+offset_bottom = 355.858
+scale = Vector2(1.331, 1.331)
 mouse_filter = 1
 position_offset = Vector2(518, -157)
 resizable = true
@@ -68,14 +65,14 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_a7gy1")]
 layout_mode = 0
-offset_left = 346.0
-offset_top = 110.0
-offset_right = 799.0
-offset_bottom = 389.0
+offset_left = 476.089
+offset_top = 99.991
+offset_right = 929.089
+offset_bottom = 378.991
+scale = Vector2(1.331, 1.331)
 mouse_filter = 1
 position_offset = Vector2(740, -180)
 resizable = true
-selected = true
 title = "End Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -108,8 +105,7 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Hey?! It seems like you dont got enought candela.
-See you next time my dear friend!"
+"value": "Baldur, I'm sorry to say that you don't have enough candela to exchange for lux at the moment. You need to collect more candela during your journey to make the trade. Don't worry; you'll have the opportunity to gather more and return when you have sufficient candela. Keep up the good work, and we'll be here to assist you when you're ready."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

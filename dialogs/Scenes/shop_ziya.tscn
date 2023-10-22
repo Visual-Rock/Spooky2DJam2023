@@ -9,14 +9,10 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="7_r6ohx"]
 
 [node name="shop_ziya" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(123.057, -256.564)
-zoom = 0.909091
+visible = false
+layout_mode = 2
+scroll_offset = Vector2(232.066, -204.033)
+zoom = 0.751315
 script = ExtResource("1_yilnt")
 connections = [{
 "from_node": &"BranchDialogNode",
@@ -47,11 +43,11 @@ connections = [{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_gd7bt")]
 layout_mode = 0
-offset_left = 767.852
-offset_top = 20.2003
-offset_right = 1393.85
-offset_bottom = 266.3
-scale = Vector2(0.909091, 0.909091)
+offset_left = 504.222
+offset_top = 8.69121
+offset_right = 1130.22
+offset_bottom = 254.791
+scale = Vector2(0.751315, 0.751315)
 mouse_filter = 1
 position_offset = Vector2(980, -260)
 resizable = true
@@ -92,11 +88,11 @@ dialog_values = Array[Dictionary]([{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_41a04")]
 layout_mode = 0
-offset_left = 76.9432
-offset_top = 92.9275
-offset_right = 400.943
-offset_bottom = 320.473
-scale = Vector2(0.909091, 0.909091)
+offset_left = -66.7768
+offset_top = 68.7964
+offset_right = 257.223
+offset_bottom = 296.342
+scale = Vector2(0.751315, 0.751315)
 mouse_filter = 1
 position_offset = Vector2(220, -180)
 resizable = true
@@ -139,11 +135,11 @@ But, before you trade your candela for lux, remember that it's also what keeps y
 
 [node name="BranchDialogNode" type="GraphNode" parent="." instance=ExtResource("2_h75xb")]
 layout_mode = 0
-offset_left = 422.398
-offset_top = 56.5639
-offset_right = 740.345
-offset_bottom = 495.957
-scale = Vector2(0.909091, 0.909091)
+offset_left = 218.723
+offset_top = 38.7438
+offset_right = 536.67
+offset_bottom = 478.137
+scale = Vector2(0.751315, 0.751315)
 mouse_filter = 1
 position_offset = Vector2(600, -220)
 resizable = true
@@ -248,11 +244,11 @@ Baldur, how much candela would you like me to transform into lux for you today?"
 
 [node name="@GraphNode@23850" type="GraphNode" parent="." instance=ExtResource("6_gd7bt")]
 layout_mode = 0
-offset_left = 767.852
-offset_top = 274.746
-offset_right = 1360.85
-offset_bottom = 696.846
-scale = Vector2(0.909091, 0.909091)
+offset_left = 504.222
+offset_top = 219.059
+offset_right = 1097.22
+offset_bottom = 641.159
+scale = Vector2(0.751315, 0.751315)
 mouse_filter = 1
 position_offset = Vector2(980, 20)
 resizable = true

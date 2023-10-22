@@ -7,14 +7,9 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="5_288am"]
 
 [node name="shop_dargan_no_items" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(385, -314)
-zoom = 0.997015
+layout_mode = 2
+scroll_offset = Vector2(-49.2395, -408.377)
+zoom = 0.906377
 script = ExtResource("1_oi4nn")
 connections = [{
 "from_node": &"StartDialogNode",
@@ -25,11 +20,11 @@ connections = [{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_cuxsi")]
 layout_mode = 0
-offset_left = -325.179
-offset_top = 114.597
-offset_right = 309.225
-offset_bottom = 405.801
-scale = Vector2(0.997015, 0.997015)
+offset_left = 103.622
+offset_top = 227.101
+offset_right = 738.026
+offset_bottom = 518.305
+scale = Vector2(0.906377, 0.906377)
 mouse_filter = 1
 position_offset = Vector2(60, -200)
 resizable = true
@@ -72,15 +67,14 @@ Take a look around, you might find something valuable in return."
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_0jxqv")]
 layout_mode = 0
-offset_left = 332.851
-offset_top = 114.597
-offset_right = 709.486
-offset_bottom = 375.711
-scale = Vector2(0.997015, 0.997015)
+offset_left = 701.831
+offset_top = 227.101
+offset_right = 1078.47
+offset_bottom = 488.215
+scale = Vector2(0.906377, 0.906377)
 mouse_filter = 1
 position_offset = Vector2(720, -200)
 resizable = true
-selected = true
 title = "End Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0

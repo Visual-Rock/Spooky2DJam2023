@@ -9,14 +9,10 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.gd" id="7_d0xui"]
 
 [node name="shop_dargan_buy_items_1" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(-270.075, -58.3991)
-zoom = 0.674716
+visible = false
+layout_mode = 2
+scroll_offset = Vector2(444.797, 110.583)
+zoom = 0.898047
 script = ExtResource("1_haua6")
 connections = [{
 "from_node": &"StartDialogNode",
@@ -37,11 +33,11 @@ connections = [{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("6_wvr6w")]
 layout_mode = 0
-offset_left = -256.204
-offset_top = 179.848
-offset_right = -17.9465
-offset_bottom = 438.189
-scale = Vector2(0.674716, 0.674716)
+offset_left = -1145.27
+offset_top = 51.0659
+offset_right = -907.016
+offset_bottom = 309.407
+scale = Vector2(0.898047, 0.898047)
 mouse_filter = 1
 position_offset = Vector2(-780, 180)
 resizable = true
@@ -84,11 +80,11 @@ Take a look around, you might find something valuable in return."
 
 [node name="@GraphNode@24015" type="GraphNode" parent="." instance=ExtResource("2_aqstr")]
 layout_mode = 0
-offset_left = 148.626
-offset_top = 139.365
-offset_right = 1280.17
-offset_bottom = 807.832
-scale = Vector2(0.674716, 0.674716)
+offset_left = -606.446
+offset_top = -2.81693
+offset_right = 525.098
+offset_bottom = 665.65
+scale = Vector2(0.898047, 0.898047)
 mouse_filter = 1
 position_offset = Vector2(-180, 120)
 resizable = true
@@ -163,11 +159,11 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_42cqe")]
 layout_mode = 0
-offset_left = 958.285
-offset_top = 112.376
-offset_right = 1343.88
-offset_bottom = 375.463
-scale = Vector2(0.674716, 0.674716)
+offset_left = 471.211
+offset_top = -38.7388
+offset_right = 856.806
+offset_bottom = 224.348
+scale = Vector2(0.898047, 0.898047)
 mouse_filter = 1
 position_offset = Vector2(1020, 80)
 resizable = true
@@ -209,11 +205,11 @@ Remember, the shadows may be dark, but your light shines brighter with every ste
 
 [node name="@GraphNode@24030" type="GraphNode" parent="." instance=ExtResource("4_42cqe")]
 layout_mode = 0
-offset_left = 971.78
-offset_top = 314.791
-offset_right = 1433.09
-offset_bottom = 550.04
-scale = Vector2(0.674716, 0.674716)
+offset_left = 489.172
+offset_top = 230.675
+offset_right = 950.482
+offset_bottom = 465.924
+scale = Vector2(0.898047, 0.898047)
 mouse_filter = 1
 position_offset = Vector2(1040, 380)
 resizable = true
@@ -250,7 +246,10 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Oh, okay. See you soon!"
+"value": " I understand, Baldur. If you ever change your mind and decide to spend your lux, you know where to find me. Until then, stay resilient, and keep fighting to save those lumens. Farewell for now, my friend.
+
+
+"
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

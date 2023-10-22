@@ -7,14 +7,10 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.gd" id="5_ypunb"]
 
 [node name="shop_dargan_missing_lux" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(281.989, -194.623)
-zoom = 0.912397
+visible = false
+layout_mode = 2
+scroll_offset = Vector2(158.598, -306.343)
+zoom = 0.754047
 script = ExtResource("1_7gfj5")
 connections = [{
 "from_node": &"StartDialogNode",
@@ -25,11 +21,11 @@ connections = [{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_w4myf")]
 layout_mode = 0
-offset_left = 64.7213
-offset_top = 85.1355
-offset_right = 269.894
-offset_bottom = 313.9
-scale = Vector2(0.912397, 0.912397)
+offset_left = 127.94
+offset_top = 215.857
+offset_right = 333.113
+offset_bottom = 444.622
+scale = Vector2(0.754047, 0.754047)
 mouse_filter = 1
 position_offset = Vector2(380, -120)
 resizable = true
@@ -70,15 +66,14 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("2_12u8f")]
 layout_mode = 0
-offset_left = 283.697
-offset_top = 85.1355
-offset_right = 786.397
-offset_bottom = 321.256
-scale = Vector2(0.912397, 0.912397)
+offset_left = 308.911
+offset_top = 215.857
+offset_right = 1134.98
+offset_bottom = 619.55
+scale = Vector2(0.754047, 0.754047)
 mouse_filter = 1
 position_offset = Vector2(620, -120)
 resizable = true
-selected = true
 title = "End Node"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -111,8 +106,8 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Hey?! It seems like you dont got enought lux to buy {{item}}. You can check back to Ziya to trade some of your candela to lux.
-See you next time my dear friend!"
+"value": "Baldur, I'm afraid you don't have enough lux for {{item}} you desire at the moment. These gadgets are valuable, and you'll need a bit more lux to unlock their full potential.
+Keep collecting and trading, and you'll return when you're ready."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]

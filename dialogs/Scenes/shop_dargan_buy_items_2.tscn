@@ -9,13 +9,9 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="5_45yjp"]
 
 [node name="shop_dargan_buy_items_2" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(160.553, -86.3396)
+visible = false
+layout_mode = 2
+scroll_offset = Vector2(101, -83)
 zoom = 0.812023
 script = ExtResource("1_jydqn")
 connections = [{
@@ -42,10 +38,10 @@ connections = [{
 
 [node name="@GraphNode@23901" type="GraphNode" parent="." instance=ExtResource("2_1ucsf")]
 layout_mode = 0
-offset_left = 66.8134
-offset_top = 21.3778
-offset_right = 555.854
-offset_bottom = 441.789
+offset_left = 126.366
+offset_top = 18.0382
+offset_right = 615.407
+offset_bottom = 438.449
 scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
 position_offset = Vector2(280, -80)
@@ -139,10 +135,10 @@ But remember, lux is a precious resource in our world, and you'll want to spend 
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("4_r5s1c")]
 layout_mode = 0
-offset_left = -517.843
-offset_top = 37.6182
-offset_right = 89.1545
-offset_bottom = 482.433
+offset_left = -458.29
+offset_top = 34.2786
+offset_right = 148.707
+offset_bottom = 479.093
 scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
 position_offset = Vector2(-440, -60)
@@ -186,10 +182,10 @@ Take a look around, you might find something valuable in return."
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
 layout_mode = 0
-offset_left = 505.306
-offset_top = 37.6182
-offset_right = 944.972
-offset_bottom = 292.697
+offset_left = 564.859
+offset_top = 34.2786
+offset_right = 1004.52
+offset_bottom = 289.357
 scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
 position_offset = Vector2(820, -60)
@@ -232,10 +228,10 @@ Remember, the shadows may be dark, but your light shines brighter with every ste
 
 [node name="@GraphNode@23924" type="GraphNode" parent="." instance=ExtResource("4_khit1")]
 layout_mode = 0
-offset_left = 537.786
-offset_top = 264.984
-offset_right = 768.287
-offset_bottom = 487.984
+offset_left = 597.34
+offset_top = 261.645
+offset_right = 827.841
+offset_bottom = 484.645
 scale = Vector2(0.812023, 0.812023)
 mouse_filter = 1
 position_offset = Vector2(860, 220)
@@ -273,7 +269,10 @@ dialog_values = Array[Dictionary]([{
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Oh, okay. See you soon,"
+"value": " I understand, Baldur. If you ever change your mind and decide to spend your lux, you know where to find me. Until then, stay resilient, and keep fighting to save those lumens. Farewell for now, my friend.
+
+
+"
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]
