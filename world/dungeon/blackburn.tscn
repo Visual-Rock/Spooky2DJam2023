@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://r3ca22dntvcw"]
+
+[ext_resource type="Script" path="res://world/dungeon/blackburn.gd" id="1_8716s"]
+[ext_resource type="Texture2D" uid="uid://dx6hp46kyy57n" path="res://assets/entities/Summoner_spritesheet.png" id="1_qhoii"]
+
+[sub_resource type="Animation" id="Animation_okp7w"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_hkiaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
+}
+
+[sub_resource type="Animation" id="Animation_iw8fh"]
+resource_name = "fall"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35, 36, 37, 38]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lnd58"]
+_data = {
+"RESET": SubResource("Animation_hkiaa"),
+"fall": SubResource("Animation_iw8fh"),
+"idle": SubResource("Animation_okp7w")
+}
+
+[node name="Blackburn" type="Node2D"]
+script = ExtResource("1_8716s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_qhoii")
+hframes = 8
+vframes = 8
+frame = 38
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lnd58")
+}
+autoplay = "idle"

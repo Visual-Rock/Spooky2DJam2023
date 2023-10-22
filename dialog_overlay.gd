@@ -20,7 +20,7 @@ func _ready():
 
 func show_dialog(dialog_name: String, values: Dictionary) -> void:
 	Main.visible = true
-	if PlayerAutoload.player:
+	if PlayerAutoload.player != null:
 		PlayerAutoload.player.max_speed = 0
 	dialog = dialog_manager.get_dialog(dialog_name)
 	dialog.restart()
@@ -34,7 +34,7 @@ func _input(event):
 				dialog = null
 				Main.visible = false
 				emit_signal("dialog_ended")
-				if PlayerAutoload.player:
+				if PlayerAutoload.player != null:
 					PlayerAutoload.player.max_speed = PlayerAutoload.player_max_speed
 				return
 			dialog.advance()
@@ -44,7 +44,7 @@ func update() -> void:
 	if dialog == null:
 		Main.visible = false
 		emit_signal("dialog_ended")
-		if PlayerAutoload.player:
+		if PlayerAutoload.player != null:
 			PlayerAutoload.player.max_speed = PlayerAutoload.player_max_speed
 		return
 	

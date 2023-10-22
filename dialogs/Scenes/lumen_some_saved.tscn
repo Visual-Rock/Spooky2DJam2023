@@ -9,7 +9,14 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/text_node.gd" id="7_mrsqd"]
 
 [node name="lumen_some_saved" type="GraphEdit"]
-layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 34.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
 scroll_offset = Vector2(-502, -245)
 script = ExtResource("1_1rg2u")
 connections = Array[Dictionary]([{

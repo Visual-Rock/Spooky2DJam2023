@@ -10,6 +10,7 @@ var candela : int = 20 : set = on_candela_set
 var lux : int = 0 : set = on_lux_set
 
 var max_candela : int = 20 : set = set_max_candela
+var lumen_positions : Array[Vector2] = [] 
 
 func set_max_candela(val) -> void:
 	max_candela = val

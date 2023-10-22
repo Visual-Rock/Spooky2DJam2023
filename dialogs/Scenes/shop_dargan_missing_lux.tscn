@@ -7,7 +7,12 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.gd" id="5_ypunb"]
 
 [node name="shop_dargan_missing_lux" type="GraphEdit"]
-layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 34.0
+offset_right = -4.0
+offset_bottom = -4.0
 scroll_offset = Vector2(281.989, -194.623)
 zoom = 0.912397
 script = ExtResource("1_7gfj5")

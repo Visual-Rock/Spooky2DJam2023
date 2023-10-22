@@ -7,7 +7,13 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="5_cv3xk"]
 
 [node name="shop_ziya_missing_lumen" type="GraphEdit"]
-layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 34.0
+offset_right = -4.0
+offset_bottom = -4.0
+scroll_offset = Vector2(394, -290)
 script = ExtResource("1_c8gjm")
 connections = [{
 "from_node": &"StartDialogNode",
@@ -18,10 +24,10 @@ connections = [{
 
 [node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_uqagf")]
 layout_mode = 0
-offset_left = 518.0
-offset_top = -157.0
-offset_right = 682.0
-offset_bottom = 66.0
+offset_left = 124.0
+offset_top = 133.0
+offset_right = 288.0
+offset_bottom = 356.0
 mouse_filter = 1
 position_offset = Vector2(518, -157)
 resizable = true
@@ -62,10 +68,10 @@ dialog_values = Array[Dictionary]([{
 
 [node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("4_a7gy1")]
 layout_mode = 0
-offset_left = 740.0
-offset_top = -180.0
-offset_right = 1068.0
-offset_bottom = 98.0
+offset_left = 346.0
+offset_top = 110.0
+offset_right = 799.0
+offset_bottom = 389.0
 mouse_filter = 1
 position_offset = Vector2(740, -180)
 resizable = true

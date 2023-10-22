@@ -9,7 +9,12 @@
 [ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="5_45yjp"]
 
 [node name="shop_dargan_buy_items_2" type="GraphEdit"]
-layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 34.0
+offset_right = -4.0
+offset_bottom = -4.0
 scroll_offset = Vector2(160.553, -86.3396)
 zoom = 0.812023
 script = ExtResource("1_jydqn")

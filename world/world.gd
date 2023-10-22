@@ -8,6 +8,9 @@ func _ready():
 	
 	Console.add_command("set", _on_set_command, 2)
 	Console.add_command("get", _on_get_command, 1)
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property($"CanvasLayer/Control/ColorRect", "color", Color(0, 0, 0, 0), 0.3)
 
 func _on_set_command(param: String, param2: String) -> void:
 	if param == "candela":

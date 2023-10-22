@@ -36,4 +36,5 @@ func _on_ziya_collision_area_area_entered(area):
 	Global.DialogOverlay.show_dialog("shop_ziya", {
 		"candela_amount": PlayerAutoload.candela
 	})
-	pass # Replace with function body.
+	Global.DialogOverlay.dialog.advance()
+	Global.DialogOverlay.update()

@@ -7,6 +7,9 @@ var original_light_image : Image
 
 var last_torch_pos = Vector2.ZERO
 
+var last_lumen_pos_size : int = 0
+var lumen_positions : Array[Vector2] = []
+
 func _ready():
 	# visible = true
 	
@@ -32,6 +35,8 @@ func load_light() -> void:
 	update_texture()
 
 func _physics_process(delta):
+	if last_lumen_pos_size != PlayerAutoload.lumen_positions.size():
+		pass
 	if PlayerAutoload.player != null:
 		var torch_pos = PlayerAutoload.player.TorchPosition.global_position
 		var global_texture_rect = Rect2(global_position - Vector2(64, 64) * 6, (original_darkness_texture.get_size() + Vector2(128, 128)) * 6)

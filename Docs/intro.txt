@@ -1,23 +1,20 @@
 Lumen:
-    Please help us!
-    They have taken us hostage. We, the lumens, are needed to make nature work.
-    We are the light that you see. The dark Lord Blackburn has captured us to spread his darkness.
+    Baldur, you've got to help us! Blackburn... He's taken the Lumens hostage, and he wants to spread darkness all around the village.
 
 Baldur:
-    Sure. How can we help?
+    Hang in there. I won't let Blackburn succeed. we'll need to rescue the Lumens to stop him.
 
 Lumen:
-    Please go out into the darkness and look for them. But be aware that there are monsters out there who want to hurt you.
-
-Dargan:
-    Baldur, you have the torch, so at least you can see a little in the dark.
-    I can provide you with helpful upgrades, but I need Lux to make them work.
-
-Baldur:
-    Where do I get Lux from?
+    Thank you, Baldur. The more Lumens you rescue, the weaker Blackburn's grip on the village becomes. Plus, for each Lumen you save, you'll earn Candela, making your torch shine brighter.
 
 Ziya:
-    I, Ziya, can help with that. But for that I need Candela.
+    Hey, Baldur! Need to make some trades? You can swap your Candela for Lux with me. Lux is invaluable in these dark times.
+
+Baldur:
+    Thanks, Ziya. I'll remember that. I we'll get the Lumens out of there, but to confront Blackburn, we'll need some upgrades.
+
+Ziya:
+    Head over to Dargan. He's got incredible upgrades that can help you save the Lumens more efficiently.
 
 Baldur:
     And where do I get Candela from?

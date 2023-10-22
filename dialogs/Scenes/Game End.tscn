@@ -1,22 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://q34o3vah5duh"]
+[gd_scene load_steps=8 format=3 uid="uid://bysgjxbv30ehh"]
 
-[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_gbmow"]
-[ext_resource type="PackedScene" uid="uid://bd3o0iklnhpji" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.tscn" id="2_bwhjj"]
-[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.gd" id="3_nv17g"]
-[ext_resource type="PackedScene" uid="uid://cy02jnnr8b70" path="res://addons/dialogsystem/graph_editor/graph/nodes/text_node.tscn" id="4_fcfqx"]
-[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/text_node.gd" id="5_j3r5n"]
-[ext_resource type="PackedScene" uid="uid://b0v61db2akncq" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.tscn" id="6_lkyll"]
-[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="7_fo87u"]
+[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/graph_edit.gd" id="1_qaxr7"]
+[ext_resource type="PackedScene" uid="uid://bd3o0iklnhpji" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.tscn" id="2_5jat1"]
+[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/start_dialog_node.gd" id="3_vhnr6"]
+[ext_resource type="PackedScene" uid="uid://b0v61db2akncq" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.tscn" id="4_ar3r8"]
+[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/end_dialog_node.gd" id="5_k8r5d"]
+[ext_resource type="PackedScene" uid="uid://cy02jnnr8b70" path="res://addons/dialogsystem/graph_editor/graph/nodes/text_node.tscn" id="6_twrut"]
+[ext_resource type="Script" path="res://addons/dialogsystem/graph_editor/graph/nodes/text_node.gd" id="7_2huiy"]
 
-[node name="lumen_no_saved" type="GraphEdit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = 34.0
-offset_right = -4.0
-offset_bottom = -4.0
-scroll_offset = Vector2(-257, -413)
-script = ExtResource("1_gbmow")
+[node name="Game End" type="GraphEdit"]
+layout_mode = 2
+scroll_offset = Vector2(-600.624, -410.741)
+zoom = 0.683013
+script = ExtResource("1_qaxr7")
 connections = Array[Dictionary]([{
 "from_node": &"StartDialogNode",
 "from_port": 0,
@@ -25,18 +21,19 @@ connections = Array[Dictionary]([{
 }, {
 "from_node": &"TextNode",
 "from_port": 0,
-"to_node": &"EndDialogNode",
+"to_node": &"@GraphNode@148461",
 "to_port": 0
 }])
 
-[node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_bwhjj")]
+[node name="StartDialogNode" type="GraphNode" parent="." instance=ExtResource("2_5jat1")]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 93.0
-offset_right = 296.0
-offset_bottom = 331.0
+offset_left = 169.095
+offset_top = 201.622
+offset_right = 534.826
+offset_bottom = 448.528
+scale = Vector2(0.683013, 0.683013)
 mouse_filter = 1
-position_offset = Vector2(-240, -320)
+position_offset = Vector2(-631.802, -306.171)
 resizable = true
 title = "Start Node"
 slot/0/left_enabled = false
@@ -57,33 +54,78 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
-script = ExtResource("3_nv17g")
+script = ExtResource("3_vhnr6")
 node_id = 0
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
 "name": "Name",
-"selected": 3,
+"selected": 4,
 "type": 0,
-"value": "Lumen",
-"values": ["Baldur", "Ziya", "Dargan", "Lumen"]
+"value": "Blackburn",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
 }, {
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "Hello Baldur! could you please start saving us.
-But be aware there are monsters out there! you are our only hope"
+"value": "You fools! The darkness shall consume you all!"
 }])
 
-[node name="TextNode" type="GraphNode" parent="." instance=ExtResource("4_fcfqx")]
+[node name="@GraphNode@148461" type="GraphNode" parent="." instance=ExtResource("4_ar3r8")]
 layout_mode = 0
-offset_left = 337.0
-offset_top = 93.0
-offset_right = 541.0
-offset_bottom = 334.0
+offset_left = 709.906
+offset_top = 137.536
+offset_right = 891.906
+offset_bottom = 360.536
+scale = Vector2(0.683013, 0.683013)
+mouse_filter = 1
+position_offset = Vector2(160, -400)
+resizable = true
+title = "End Node"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+script = ExtResource("5_k8r5d")
+node_id = 3
+dialog_values = Array[Dictionary]([{
+"default": 0.0,
+"name": "Name",
+"selected": 0,
+"type": 0,
+"value": "Baldur",
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
+}, {
+"default": "",
+"name": "Text",
+"type": 2,
+"value": "We won't let you plunge our village into eternal darkness!"
+}])
+
+[node name="TextNode" type="GraphNode" parent="." instance=ExtResource("6_twrut")]
+layout_mode = 0
+offset_left = 505.002
+offset_top = 151.196
+offset_right = 687.002
+offset_bottom = 374.196
+scale = Vector2(0.683013, 0.683013)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 1
-position_offset = Vector2(80, -320)
+position_offset = Vector2(-140, -380)
 resizable = true
 title = "Text Node"
 slot/0/left_enabled = true
@@ -104,7 +146,7 @@ slot/1/right_type = 0
 slot/1/right_color = Color(1, 1, 1, 1)
 slot/1/right_icon = null
 slot/1/draw_stylebox = true
-script = ExtResource("5_j3r5n")
+script = ExtResource("7_2huiy")
 node_id = 1
 dialog_values = Array[Dictionary]([{
 "default": 0.0,
@@ -112,57 +154,12 @@ dialog_values = Array[Dictionary]([{
 "selected": 0,
 "type": 0,
 "value": "Baldur",
-"values": ["Baldur", "Ziya", "Dargan", "Lumen"]
+"values": ["Baldur", "Lumen", "Ziya", "Dargan", "Blackburn"]
 }, {
 "default": "",
 "name": "Text",
 "type": 2,
-"value": "sure! I start right away."
-}])
-
-[node name="EndDialogNode" type="GraphNode" parent="." instance=ExtResource("6_lkyll")]
-layout_mode = 0
-offset_left = 597.0
-offset_top = 93.0
-offset_right = 820.0
-offset_bottom = 327.0
-mouse_filter = 1
-position_offset = Vector2(340, -320)
-resizable = true
-selected = true
-title = "End Node"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = false
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("7_fo87u")
-node_id = 3
-dialog_values = Array[Dictionary]([{
-"default": 0.0,
-"name": "Name",
-"selected": 3,
-"type": 0,
-"value": "Lumen",
-"values": ["Baldur", "Ziya", "Dargan", "Lumen"]
-}, {
-"default": "",
-"name": "Text",
-"type": 2,
-"value": "Thank you! and good luck"
+"value": "Not if we have anything to say about it, Blackburn."
 }])
 
 [connection signal="connection_request" from="." to="." method="_on_connection_request" flags=18]
